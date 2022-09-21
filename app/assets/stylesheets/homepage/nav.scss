@@ -1,0 +1,76 @@
+.nav {
+  height: 10vh;
+  width: 100vw;
+  padding: 1rem;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  img {
+    // width: 25rem;
+  }
+
+  .search {
+    border: 1px solid black;
+    padding: 0.6rem 1rem;
+    border-radius: 5px;
+    background-color: $color-backgorund;
+
+    select {
+      background-color: $color-backgorund;
+    }
+
+    .input {
+      background-color: $color-backgorund;
+      padding: 0.5rem 1rem;
+    }
+  }
+
+  .user {
+    display: flex;
+    gap: 2rem;
+
+    .favorite {
+      display: flex;
+      position: relative;
+
+      .fav {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        height: 1rem;
+        width: 1rem;
+        // padding: 10px;
+        border-radius: 2px;
+        background-color: $primary-color;
+        font-size: 0.8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $color-white;
+      }
+    }
+
+    .cart {
+      display: flex;
+      position: relative;
+
+      .shop {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        height: 1rem;
+        width: 1rem;
+        // padding: 10px;
+        border-radius: 2px;
+        background-color: $primary-color;
+        font-size: 0.8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $color-white;
+      }
+    }
+  }
+}

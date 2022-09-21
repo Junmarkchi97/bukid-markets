@@ -1,0 +1,115 @@
+$primary-color: #798777;
+$primary-color-light: #a2b29f;
+$primary-color-lightest: #bdd2b6;
+$primary-color-bright: #f8ede3;
+$color-white: #ffffff;
+$color-black: #000000;
+$color-dark: #363949;
+
+$color-danger: #ff0000;
+$color-success: #008000;
+
+$color-info-dark: #7d8da1;
+$color-info-light: #dce1eb;
+
+$color-backgorund: #f6f6f9;
+
+$input-border-radius: 10px;
+$card-border-radius: 2rem;
+$border-radius-1: 0.4rem;
+$border-radius-2: 0.8rem;
+$border-radius-3: 1.2rem;
+
+$card-padding: 1.8rem;
+$padding-1: 1.2rem;
+
+a {
+  color: $color-dark;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 1.8rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+}
+
+h3 {
+  font-size: 0.87rem;
+}
+
+h4 {
+  font-size: 0.8rem;
+}
+
+h5 {
+  font-size: 0.77rem;
+}
+
+small {
+  font-size: 0.75rem;
+}
+
+.profile-photo {
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.text-muted {
+  color: $color-info-dark;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+}
+
+p {
+  color: $color-dark;
+}
+
+b {
+  color: $color-dark;
+}
+
+.primary {
+  color: $primary-color;
+}
+
+.danger {
+  color: $color-danger;
+}
+
+.success {
+  color: $color-success;
+}
+
+.warning {
+  color: $color-danger;
+}
+
+.overflow {
+  overflow-y: scroll;
+  height: 30rem;
+}
+
+.error {
+  color: red;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.image {
+  // margin-top: 1rem;
+  height: auto;
+  width: 10%;
+}

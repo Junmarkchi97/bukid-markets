@@ -1,17 +1,24 @@
-## **Version1**
+# README
 
-### _Focused on Rice farming businesses_
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
----
+Things you may want to cover:
 
-- Users should be able to create an account as a Customer, Farm owner or a Worker.
-- Farm owners should be able to use the accounting feature for keeping and analyzing farm financial records.
-- Farm owners and workers should be able to communicate through chat.
-- Website should have a marketplace on which rice farm owners can search for a rice grain buyer based on asking price
-- Customers should be able to use the marketplace and search for available fresh farm produce.
+* Ruby version
 
----
+* System dependencies
 
-## **Version2**
+* Configuration
 
-`To be Decided`
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...

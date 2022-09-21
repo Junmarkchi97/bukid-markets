@@ -1,0 +1,22 @@
+.nav
+  %img.image{:src => 'logo.png'}
+  .search
+    %select#drop-down{:name => "drop-down"}
+      %option{:value => "one"} ALL CATEGORIES
+      %option{:value => "two"} Two
+      %option{:value => "three"} Three
+    %input.input{:placeholder => "I'm searching for.."}
+  .user
+    .profile
+      %span.material-symbols-sharp
+        person
+    .favorite
+      %span.material-symbols-sharp
+        favorite
+      .fav
+        1
+    .cart
+      %span.material-symbols-sharp
+        shopping_cart
+      .shop
+        1
