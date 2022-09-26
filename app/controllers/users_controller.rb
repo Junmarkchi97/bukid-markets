@@ -32,6 +32,7 @@ class UsersController < ApplicationController
       :bio,
       :first_name,
       :last_name,
+      :avatar
     )
   end
 end

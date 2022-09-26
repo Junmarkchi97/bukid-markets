@@ -1,21 +1,24 @@
 .nav
-  %img.image{:src => 'logo.png'}
+  %a{:href => "/"}
+    %img.image{:src => 'logo.png'}
   .search
     %select#drop-down{:name => "drop-down"}
       %option{:value => "one"} ALL CATEGORIES
       %option{:value => "two"} Two
       %option{:value => "three"} Three
     %input.input{:placeholder => "I'm searching for.."}
+    %span.material-symbols-sharp
+      search
   .user
-    .profile
+    %a.profile{:href => "#"}
       %span.material-symbols-sharp
         person
-    .favorite
+    %a.favorite{:href => "#"}
       %span.material-symbols-sharp
         favorite
       .fav
         1
-    .cart
+    %a.cart{:href => "#"}
       %span.material-symbols-sharp
         shopping_cart
       .shop

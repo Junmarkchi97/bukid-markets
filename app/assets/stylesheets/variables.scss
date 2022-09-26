@@ -5,6 +5,7 @@ $primary-color-bright: #f8ede3;
 $color-white: #ffffff;
 $color-black: #000000;
 $color-dark: #363949;
+$color-gray: gray;
 
 $color-danger: #ff0000;
 $color-success: #008000;
@@ -12,7 +13,7 @@ $color-success: #008000;
 $color-info-dark: #7d8da1;
 $color-info-light: #dce1eb;
 
-$color-backgorund: #f6f6f9;
+$color-backgorund: #f0f0f0;
 
 $input-border-radius: 10px;
 $card-border-radius: 2rem;
@@ -111,5 +112,5 @@ b {
 .image {
   // margin-top: 1rem;
   height: auto;
-  width: 10%;
+  width: 12rem;
 }

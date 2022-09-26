@@ -1,5 +1,5 @@
 .nav {
-  height: 10vh;
+  height: 8rem;
   width: 100vw;
   padding: 1rem;
   border: 1px solid black;
@@ -12,18 +12,39 @@
   }
 
   .search {
-    border: 1px solid black;
+    // border: 1px solid black;
     padding: 0.6rem 1rem;
     border-radius: 5px;
     background-color: $color-backgorund;
+    display: flex;
+    align-items: center;
+
+    span {
+      color: $color-gray;
+    }
 
     select {
       background-color: $color-backgorund;
+      font-size: 0.7rem;
+      margin-right: 1rem;
+      font-weight: 600;
     }
 
     .input {
       background-color: $color-backgorund;
       padding: 0.5rem 1rem;
+      // position: relative;
+
+      // &::before {
+      //   content: "";
+      //   position: absolute;
+      //   right: 0;
+      //   height: 51px;
+      //   width: 51px;
+      //   background: black;
+      //   display: inline-block;
+      //   margin: 1px;
+      // }
     }
   }
 
@@ -31,9 +52,14 @@
     display: flex;
     gap: 2rem;
 
+    .profile {
+      cursor: pointer;
+    }
+
     .favorite {
       display: flex;
       position: relative;
+      cursor: pointer;
 
       .fav {
         position: absolute;
@@ -55,6 +81,7 @@
     .cart {
       display: flex;
       position: relative;
+      cursor: pointer;
 
       .shop {
         position: absolute;

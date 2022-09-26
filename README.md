@@ -1,24 +1,16 @@
-# README
+## **Version1**
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### _Agriculture Marketplace_
 
-Things you may want to cover:
+---
 
-* Ruby version
+- Users should be able to create an account as a Buyer or Seller.
+- Sellers should be able to list a product and sell on the website.
+- Buyers should be able to see the location of the seller.
+- Buyers should be able to see products based on searched keyword.
 
-* System dependencies
+---
 
-* Configuration
+## **Version2**
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+`To be Decided`
