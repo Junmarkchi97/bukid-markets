@@ -1,0 +1,11 @@
+development:
+  cloud_name: "bukidmarkets"
+  api_key: "525151917851314"
+  api_secret: "4z9IumMyBGEXnUpjjJVvEE8Evrg"
+  secure: true
+
+production:
+  cloud_name: "bukidmarkets"
+  api_key: "525151917851314"
+  api_secret: "4z9IumMyBGEXnUpjjJVvEE8Evrg"
+  secure: true

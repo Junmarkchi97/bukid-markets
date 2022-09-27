@@ -4,6 +4,6 @@ class AddSellerToUsers < ActiveRecord::Migration[7.0]
     add_column :users, :bio, :text
     add_column :users, :first_name, :string
     add_column :users, :last_name, :string
-    add_column :users, :avatar, :binary
+    add_column :users, :avatar, :string
   end
 end

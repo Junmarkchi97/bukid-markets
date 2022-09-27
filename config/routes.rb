@@ -11,9 +11,9 @@ Rails.application.routes.draw do
   resource :cards, only:[:show]
   resources :order_items
 
-  # authenticated :user do
-  #   root to: 'home#index', as: :root_app
-  # end
+  authenticated :user do
+    root to: 'home#index', as: :root_app
+  end
 
 
   # devise_scope :user do

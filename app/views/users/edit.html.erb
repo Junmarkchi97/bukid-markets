@@ -1,1 +1,2 @@
 <%= render 'form', user: @user %>
+<%= link_to image_tag(@user.avatar.to_s, class: "image"), @user.avatar.to_s %>

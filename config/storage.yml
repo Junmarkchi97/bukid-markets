@@ -8,18 +8,6 @@ local:
 
 cloudinary:
   service: Cloudinary
-
-development:
-  cloud_name: "dyha71k3v"
-  api_key: "525151917851314"
-  api_secret: "4z9IumMyBGEXnUpjjJVvEE8Evrg"
-  secure: true
-
-production:
-  cloud_name: "dyha71k3v"
-  api_key: "525151917851314"
-  api_secret: "4z9IumMyBGEXnUpjjJVvEE8Evrg"
-  secure: true
 # Use bin/rails credentials:edit to set the AWS secrets (as aws:access_key_id|secret_access_key)
 # amazon:
 #   service: S3
