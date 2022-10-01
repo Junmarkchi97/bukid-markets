@@ -26,6 +26,12 @@
     <%= form.rich_text_area :description %>
   </div>
 
+
+  <div>
+    <%= form.label :pictures, style: "display: block" %>
+    <%= form.file_field :pictures, multiple: true %>
+  </div>
+
   <div>
     <%= form.submit %>
   </div>

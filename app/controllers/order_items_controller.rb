@@ -14,10 +14,16 @@ class OrderItemsController < ApplicationController
     @order_items = current_order.order_items
   end
 
+  def destroy
+    @order = current_order
+    @order_item = @order.order_items.find(params[:id])
+    @order_item.destroy
+    @order_items = current_order.order_items
+  end
 
   private
 
   def order_params
-    params.require(:order_item).permit(:product_id, :quantity)
+    params.require(:order_item).permit(:product_id, :order_id, :quantity, :total, :unit_price)
   end
-end
+end 

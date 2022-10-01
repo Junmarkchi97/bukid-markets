@@ -14,5 +14,13 @@
     <%= product.description %>
   </p>
 
+   <p>
+    <strong>Picture:</strong>
+    <% product.pictures.each do |picture| %>
+      <%= image_tag(picture, class: "image") %>
+    <% end %>
+  </p>
+
+
 
 </div>

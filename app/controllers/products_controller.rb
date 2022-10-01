@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :set_product, only: %i[ show edit update destroy ]
+  before_action :set_product,:set_user, only: %i[ show edit update destroy ]
 
   # GET /products or /products.json
   def index
@@ -21,7 +21,7 @@ class ProductsController < ApplicationController
 
   # POST /products or /products.json
   def create
-    @product = Product.new(product_params)
+    @product = current_user.products.build(product_params)
 
     respond_to do |format|
       if @product.save
@@ -63,8 +63,12 @@ class ProductsController < ApplicationController
       @product = Product.find(params[:id])
     end
 
+    def set_user
+      @user = current_user.id
+    end
+
     # Only allow a list of trusted parameters through.
     def product_params
-      params.require(:product).permit(:title, :price, :description)
+      params.require(:product).permit(:title, :description, :price, pictures: [] )
     end
 end

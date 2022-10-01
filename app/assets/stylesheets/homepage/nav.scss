@@ -2,7 +2,7 @@
   height: 8rem;
   width: 100vw;
   padding: 1rem;
-  border: 1px solid black;
+  // border: 1px solid black;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -60,6 +60,7 @@
       display: flex;
       position: relative;
       cursor: pointer;
+      text-decoration: none;
 
       .fav {
         position: absolute;
@@ -82,6 +83,7 @@
       display: flex;
       position: relative;
       cursor: pointer;
+      text-decoration: none;
 
       .shop {
         position: absolute;

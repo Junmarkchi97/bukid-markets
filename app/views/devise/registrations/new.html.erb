@@ -22,7 +22,7 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.button "Sign up", data: { turbo: false, disable_with: "<i class='fa fa-spinner fa-spin'></i> Signing up..." } %>
   </div>
 <% end %>
 

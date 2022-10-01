@@ -18,7 +18,7 @@
   <% end %>
 
   <div class="actions">
-    <%= f.submit "Log in" %>
+    <%= f.button "Log in", data: {turbo: false, disable_with: "<i class='fa fa-spinner fa-spin'></i> Signing in..."} %>
   </div>
 <% end %>
 

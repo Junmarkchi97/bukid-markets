@@ -6,5 +6,6 @@
   = link_to 'Edit Profile', edit_user_path(current_user)
   %br
   = link_to 'Products', products_path
+  = current_user.role
 - else
   = link_to 'Sign in', user_session_path

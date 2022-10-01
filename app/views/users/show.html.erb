@@ -1,5 +1,4 @@
 <h1><%= @user.full_name %></h1>
-<p>Seller: <%= @user.seller? %></p>
 <h2>Seller</h2>
 <%= link_to "Home" , root_path %>
 <% if current_user.id == @user.id %>

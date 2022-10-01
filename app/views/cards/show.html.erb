@@ -6,8 +6,10 @@
 
   <%= form_for item do |f| %>
      <%= f.hidden_field :product_id, :value => item.product_id %>
-     <%= f.number_field :quantity, :value => item.quantity.to_i %>
+     <%= f.number_field :quantity, :value => item.quantity.to_i, :min => 1 %>
      <%= f.submit "Update Card" %>
+
+     <%= link_to "Remove Items", order_item_path(item), data: { turbo_method: :delete } %>
   <% end %>
 
   <h2>Subtotal: <%= item.total %> </h2>

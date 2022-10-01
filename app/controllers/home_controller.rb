@@ -27,9 +27,12 @@ class HomeController < ApplicationController
 
   def user_params
     params.require(:user).permit(
-      :bio,
+      :username,
       :first_name,
       :last_name,
+      :bio,
+      :avatar,
+      :phone_number
     )
   end
 end
