@@ -16,3 +16,8 @@
 #   this_user.update!( first_name: user[:first_name], last_name: user[:last_name], seller: user[:seller], bio: user[:bio], password: SecureRandom.uuid, )
 #   this_user.save
 # end
+
+
+Category.create(name: "Fruits")
+Category.create(name: "Vegetables")
+Category.create(name: "Grain")

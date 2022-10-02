@@ -2,8 +2,8 @@
 
 one:
   user: one
-  address_line1: MyString
-  address_line2: MyString
+  street: MyString
+  barangay: MyString
   city: MyString
   postal_code: MyString
   country: MyString
@@ -11,8 +11,8 @@ one:
 
 two:
   user: two
-  address_line1: MyString
-  address_line2: MyString
+  street: MyString
+  barangay: MyString
   city: MyString
   postal_code: MyString
   country: MyString

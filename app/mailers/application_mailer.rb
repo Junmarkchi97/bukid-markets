@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: "bukidmarkets@gmail.com"
+  default from: ENV['SMTP_EMAIL']
   layout "mailer"
 end

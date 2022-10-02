@@ -5,9 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable, :confirmable
 
   mount_uploader :avatar, ImgUploader
-  has_many :orders
   has_many :products
-  has_one :user_address
+  has_one :address, :dependent => :destroy
 
   enum role: [:buyer, :seller, :admin]
   after_initialize :set_default_role, :if => :new_record?

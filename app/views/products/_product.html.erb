@@ -8,19 +8,13 @@
     <strong>Price:</strong>
     <%= product.price %>
   </p>
+  <p>
+    <strong>Category:</strong>
+    <%= product.category.name %>
+  </p>
 
   <p>
     <strong>Description:</strong>
     <%= product.description %>
   </p>
-
-   <p>
-    <strong>Picture:</strong>
-    <% product.pictures.each do |picture| %>
-      <%= image_tag(picture, class: "image") %>
-    <% end %>
-  </p>
-
-
-
 </div>

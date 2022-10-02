@@ -26,11 +26,11 @@
     <%= form.rich_text_area :description %>
   </div>
 
-
   <div>
-    <%= form.label :pictures, style: "display: block" %>
-    <%= form.file_field :pictures, multiple: true %>
+    <%= form.label :category, style: "display: block" %>
+    <%= form.select :category_id, options_for_select(@categories.collect { |category|  [category.name, category.id] }) %>
   </div>
+
 
   <div>
     <%= form.submit %>
