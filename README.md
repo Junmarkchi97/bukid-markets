@@ -8,6 +8,7 @@
 - Sellers should be able to list a product and sell on the website.
 - Buyers should be able to see the location of the seller.
 - Buyers should be able to see products based on searched keyword.
+- Buyers should be able to see products based on category.
 
 ---
 

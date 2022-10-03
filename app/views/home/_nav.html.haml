@@ -1,18 +1,17 @@
 .nav
   %a{:href => "/"}
-    %img.image{:src => 'logo.png'}
+    %img.image{:src => 'https://res.cloudinary.com/bukidmarkets/image/upload/v1664814046/GROWING_3_me4o03.png'}
   .search
     %select#drop-down{:name => "drop-down"}
-      %option{:value => "one"} ALL CATEGORIES
-      %option{:value => "two"} Two
-      %option{:value => "three"} Three
+      %option{:value => "0"} All Categories
+      - if @categories
+        - @categories.collect do |cat|
+          %option{:value => cat.id }
+            = cat.name
     %input.input{:placeholder => "I'm searching for.."}
     %span.material-symbols-sharp
       search
   .user
-    %a.profile{:href => "#"}
-      %span.material-symbols-sharp
-        person
     %a.favorite{:href => "#"}
       %span.material-symbols-sharp
         favorite
@@ -23,3 +22,9 @@
         shopping_cart
       .shop
         1
+    - if current_user
+      %a.profile{:href => "#"}
+        %span.material-symbols-sharp
+          person
+    - else
+      = link_to "Sign In", user_session_path

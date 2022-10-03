@@ -18,6 +18,6 @@
 # end
 
 
-Category.create(name: "Fruits")
-Category.create(name: "Vegetables")
-Category.create(name: "Grain")
+Category.find_or_create_by(name: "Fruits")
+Category.find_or_create_by(name: "Vegetables")
+Category.find_or_create_by(name: "Grains")

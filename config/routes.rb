@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :users , only: [:index, :show, :edit, :update] do
-    resource :address, path_names: { edit: "" }
+    resources :address
+    # , path_names: { edit: "" }
   end
   # , except: :show,
   # authenticated :user do

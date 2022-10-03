@@ -1,14 +1,15 @@
-class AddressesController < ApplicationController
+class AddressController < ApplicationController
   before_action :set_address, only: %i[ show edit update destroy ]
   before_action :get_user
 
-  # GET /addresses or /addresses.json
+  # GET /address or /address.json
   def index
-    @addresses = @user.address
+    @address = Address.all
   end
 
-  # GET /addresses/1 or /addresses/1.json
+  # GET /address/1 or /address/1.json
   def show
+    @address = @user.address
   end
 
   # GET /addresses/new
@@ -26,7 +27,7 @@ class AddressesController < ApplicationController
 
     respond_to do |format|
       if @address.save
-        format.html { redirect_to user_address_path, notice: "Address was successfully created." }
+        format.html { redirect_to user_address_index_path(@user), notice: "Address was successfully created." }
         format.json { render :show, status: :created, location: @address }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -39,7 +40,7 @@ class AddressesController < ApplicationController
   def update
     respond_to do |format|
       if @address.update(address_params)
-        format.html { redirect_to user_address_path, notice: "Address was successfully updated." }
+        format.html { redirect_to user_address_index_path(@user), notice: "Address was successfully updated." }
         format.json { render :show, status: :ok, location: @address }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -53,7 +54,7 @@ class AddressesController < ApplicationController
     @address.destroy
 
     respond_to do |format|
-      format.html { redirect_to user_address_path, notice: "Address was successfully destroyed." }
+      format.html { redirect_to user_address_index_path(@user), notice: "Address was successfully destroyed." }
       format.json { head :no_content }
     end
   end

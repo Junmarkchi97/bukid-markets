@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   before_action :authenticate_user!, only: [:show]
+  before_action :get_categories
 
   def index
     @users = User.all
@@ -34,5 +35,9 @@ class HomeController < ApplicationController
       :avatar,
       :phone_number
     )
+  end
+
+  def get_categories
+    @categories = Category.all
   end
 end

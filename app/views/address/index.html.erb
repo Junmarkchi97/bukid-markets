@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Address</h1>
+
+<div id="address">
+  <% if @user.address %>
+    <% @address.each do |address| %>
+      <%= render partial: "address" %>
+      <p>
+        <%= link_to "Show this address", user_address_url %>
+      </p>
+    <% end %>
+  <% end %>
+</div>
+
+<%= link_to "New address", new_user_address_path %>
