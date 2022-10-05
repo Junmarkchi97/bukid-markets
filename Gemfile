@@ -10,6 +10,10 @@ gem 'carrierwave', '~> 2.2', '>= 2.2.2'
 gem 'cloudinary', '~> 1.23'
 gem 'rmagick', '~> 4.3'
 gem 'dotenv-rails', groups: [:development, :test]
+gem 'omniauth'
+gem 'omniauth-google-oauth2'
+gem 'omniauth-rails_csrf_protection', "~> 1.0"
+
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4"
@@ -77,4 +81,8 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
+end
+
+group :development, :test do
+  gem "rspec-rails"
 end

@@ -28,12 +28,14 @@
       font-size: 0.7rem;
       margin-right: 1rem;
       font-weight: 600;
+      border: none;
     }
 
     .input {
       background-color: $color-backgorund;
       padding: 0.5rem 1rem;
       // position: relative;
+      border: none;
 
       // &::before {
       //   content: "";

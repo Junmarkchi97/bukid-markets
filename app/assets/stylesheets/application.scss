@@ -31,3 +31,13 @@ body {
   // background: $color-backgorund;
   // user-select: none;
 }
+
+.fast-spin {
+  -webkit-animation: fa-spin 1s infinite linear;
+  animation: fa-spin 1s infinite linear;
+  font-size: 1.2rem;
+}
+
+.alert {
+  color: $color-danger;
+}
