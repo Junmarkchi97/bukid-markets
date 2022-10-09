@@ -8,6 +8,18 @@ Rails.application.routes.draw do
     omniauth_callbacks: 'users/omniauth_callbacks'
   }
 
+  devise_scope :user do
+    get 'sign_in', to: 'devise/sessions#new'
+    get 'sign_up', to: 'devise/registrations#new'
+    get 'edit', to: 'users#edit'
+    get 'address', to: 'address#index'
+  end
+
+  devise_scope :address do
+    get 'address', to: 'address#index'
+    get 'address/new', to: 'address#new'
+  end
+
   resources :users , only: [:index, :show, :edit, :update] do
     resources :address
     # , path_names: { edit: "" }

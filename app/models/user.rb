@@ -11,6 +11,9 @@ class User < ApplicationRecord
       user.password = Devise.friendly_token[0,20]
       user.full_name = auth.info.name
       user.google_avatar = auth.info.image
+      user.avatar = auth.info.image
+      user.first_name = auth.info.first_name
+      user.last_name = auth.info.last_name
       # if you are using confirmable and the provider(s) you use validate emails,
       # uncomment the line below to skip the confirmation emails.
       user.skip_confirmation!
@@ -25,7 +28,7 @@ class User < ApplicationRecord
   after_initialize :set_default_role, :if => :new_record?
   
   validates :first_name, :last_name, presence: true
-  validates :username, presence: true, length: { minimum: 3 }, uniqueness: true
+  # validates :username, length: { minimum: 3 }, uniqueness: true
   validates :bio, length: { maximum: 100 } , allow_blank: true
   
   def set_default_role

@@ -16,15 +16,10 @@
       %span.material-symbols-sharp
         favorite
       .fav
-        1
-    %a.cart{:href => "#"}
-      %span.material-symbols-sharp
-        shopping_cart
-      .shop
-        1
+        143
     - if current_user
       %a.profile{:href => "#"}
         %span.material-symbols-sharp
           person
     - else
-      = link_to "Sign In", user_session_path
+      = link_to "Sign In", sign_in_path

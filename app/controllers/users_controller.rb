@@ -1,10 +1,11 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!, only: [:show]
   before_action :get_categories
+  before_action :get_user
+  before_action :get_address
 
   def index
     @users = User.all
-
   end
 
   def show
@@ -36,6 +37,14 @@ class UsersController < ApplicationController
       :avatar,
       :phone_number
     )
+  end
+
+  def get_user
+    @user = current_user
+  end
+
+  def get_address
+    @address = current_user.address
   end
 
   def get_categories

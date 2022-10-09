@@ -3,14 +3,11 @@
 <h1>Address</h1>
 
 <div id="address">
-  <% if @user.address %>
-    <% @address.each do |address| %>
-      <%= render partial: "address" %>
-      <p>
-        <%= link_to "Show this address", user_address_url %>
-      </p>
-    <% end %>
+  <% if @address %>
+    <%= @address.street %>
   <% end %>
 </div>
 
-<%= link_to "New address", new_user_address_path %>
+<%= link_to "New address", new_user_address_path(@user) %>
+<br>
+<%= link_to 'Home', root_path %>

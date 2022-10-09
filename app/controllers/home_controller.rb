@@ -1,9 +1,11 @@
 class HomeController < ApplicationController
   before_action :authenticate_user!, only: [:show]
   before_action :get_categories
+  before_action :get_user_address
 
   def index
     @users = User.all
+    @products = Product.all
   end
 
   def show
@@ -40,4 +42,11 @@ class HomeController < ApplicationController
   def get_categories
     @categories = Category.all
   end
+
+  def get_user_address
+    if current_user
+      @address = current_user.address
+    end
+  end
+
 end

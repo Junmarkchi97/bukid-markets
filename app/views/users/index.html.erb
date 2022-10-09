@@ -2,7 +2,10 @@
 <p>Find me in app/views/users/index.html.erb</p>
 <% @users.each do |user| %>
   <% if current_user.id == user.id %>
+    <%= user.email %>
     <%= link_to 'Edit my Profile' , edit_user_path(current_user) %><br>
     <%= link_to 'Home' , root_path %>
   <% end %>
 <% end %>
+
+<%= link_to "test", user_address_index_path %>
