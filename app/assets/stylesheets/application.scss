@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 @import "variables";
-@import "homepage/nav";
+@import "homepage/homepage";
 @import "actiontext";
 @import "authentication/login/login";
 
@@ -22,7 +22,7 @@ html:focus-within {
 }
 
 body {
-  height: 100vh;
+  height: auto;
   width: 100vw;
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;

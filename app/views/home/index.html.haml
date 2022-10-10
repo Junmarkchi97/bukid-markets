@@ -1,7 +1,13 @@
+= render 'category'
+
 .home
   - @products.each do |product|
-    = product.title
-    %br
+    .card
+      = product.title
+      = product.description
+      = "$#{product.price}"
+      %br
 
 
 = link_to "Products", products_path
+= render 'footer'

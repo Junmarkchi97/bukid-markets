@@ -1,0 +1,62 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-background;
+
+  .details {
+    display: flex;
+    justify-content: center;
+    width: 60vw;
+    gap: 3rem;
+    position: relative;
+    padding: 2rem;
+
+    &::after {
+      content: "";
+      height: 1px;
+      width: 100%;
+      background-color: $color-info-light;
+      position: absolute;
+      bottom: 0;
+    }
+
+    .customer-service,
+    .about-bukid,
+    .payment,
+    .follow-us {
+      display: flex;
+      flex-direction: column;
+      font-size: 0.9rem;
+
+      .contents {
+        display: flex;
+        margin: auto;
+        flex-direction: column;
+        font-size: 0.7rem;
+        gap: 0.7rem;
+        margin: 1rem 0rem;
+
+        a {
+          transition: 0.2s;
+          text-decoration: none;
+          margin-left: 0.2rem;
+
+          &:hover {
+            color: $primary-color-light;
+          }
+        }
+      }
+    }
+  }
+
+  .copyright {
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    color: gray;
+  }
+}

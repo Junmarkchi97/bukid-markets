@@ -1,0 +1,17 @@
+@import "homepage/nav";
+@import "homepage/category";
+@import "homepage/footer";
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .card {
+    border: 1px solid black;
+    border-radius: 10px;
+    height: auto;
+    width: 15rem;
+    padding: 1rem;
+  }
+}
