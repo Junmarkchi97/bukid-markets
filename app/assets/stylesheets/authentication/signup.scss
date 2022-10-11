@@ -45,13 +45,19 @@
 
     .error {
       display: flex;
+      margin: 1rem;
 
       h2 {
-        font-size: 1rem;
+        font-size: 0.7rem;
       }
 
       li {
+        font-size: 0.7rem;
         text-decoration: none;
+
+        &:first-child {
+          text-decoration: none;
+        }
       }
     }
 
@@ -63,10 +69,7 @@
       display: flex;
       gap: 1rem;
       flex-direction: column;
-
-      .field_with_errors {
-        display: inline;
-      }
+      margin-top: 1rem;
     }
 
     .field-email,
@@ -79,10 +82,6 @@
       position: relative;
       text-align: center;
       align-items: center;
-
-      .field_with_errors {
-        width: 120rem;
-      }
 
       .label-email,
       .label-pass,
