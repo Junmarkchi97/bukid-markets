@@ -1,15 +1,37 @@
-.login-wrapper {
-  width: 100vw;
-  max-height: 50vmin;
-  min-height: 40vh;
+.signup-wrapper {
+  // width: 100vw;
+  // max-height: 50vmin;
+  // min-height: 40vh;
+  // display: flex;
+  // flex-direction: row;
+  // align-items: center;
+  // justify-content: center;
+  // padding: 1rem;
+  // background-color: $color-background;
   display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: center;
-  padding: 1rem;
-  background-color: $color-background;
+  align-items: center;
+  position: relative;
+  height: 45vh;
+  box-shadow: 1px 0 1px 0 $primary-color;
 
-  .login-container {
+  .signup-image {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 20%;
+    right: 20%;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      opacity: 0.6;
+      filter: blur(2px);
+    }
+  }
+
+  .signup-container {
     display: flex;
     flex-direction: column;
     padding: 1rem;
@@ -18,16 +40,19 @@
     background-color: $color-white;
     width: 20rem;
     user-select: none;
+    z-index: 2;
+    translate: -20vh;
 
-    .alert {
+    .error {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 0.8;
-      height: 2rem;
-      margin: 0;
-      padding: 0;
-      font-size: 0.8rem;
+
+      h2 {
+        font-size: 1rem;
+      }
+
+      li {
+        text-decoration: none;
+      }
     }
 
     h2 {
@@ -38,17 +63,33 @@
       display: flex;
       gap: 1rem;
       flex-direction: column;
+
+      .field_with_errors {
+        display: inline;
+      }
     }
 
     .field-email,
-    .field-pass {
+    .field-pass,
+    .field-passconfirm,
+    .field-username,
+    .field-firstname,
+    .field-lastname {
       display: flex;
       position: relative;
       text-align: center;
       align-items: center;
 
+      .field_with_errors {
+        width: 120rem;
+      }
+
       .label-email,
-      .label-pass {
+      .label-pass,
+      .label-passconfirm,
+      .label-username,
+      .label-firstname,
+      .label-lastname {
         position: absolute;
         pointer-events: none;
         left: 10px;
@@ -70,6 +111,57 @@
         &:focus ~ .label-email,
         &:not(:focus):valid ~ .label-email {
           translate: -5px -18px;
+          scale: 0.8;
+          background-color: $color-white;
+        }
+
+        &:not(:focus):valid .alert {
+          display: none;
+        }
+
+        &:focus {
+          border: 1px solid $primary-color2;
+          box-shadow: 0 0 3px 0 $primary-color2;
+        }
+      }
+
+      .input-username,
+      .input-firstname,
+      .input-lastname {
+        padding: 10px;
+        border-radius: 4px;
+        border: 1px solid $primary-color;
+        color: $primary-color;
+        transition: 0.2s ease;
+        width: 100%;
+
+        &:focus ~ .label-username,
+        &:not(:focus):valid ~ .label-username,
+        &:focus ~ .label-firstname,
+        &:not(:focus):valid ~ .label-firstname,
+        &:focus ~ .label-lastname,
+        &:not(:focus):valid ~ .label-lastname {
+          translate: -7px -18px;
+          scale: 0.8;
+          background-color: $color-white;
+        }
+
+        &:not(:focus):valid .alert {
+          display: none;
+        }
+      }
+
+      .input-passconfirm {
+        padding: 10px;
+        border-radius: 4px;
+        border: 1px solid $primary-color;
+        color: $primary-color;
+        transition: 0.2s ease;
+        width: 100%;
+
+        &:focus ~ .label-passconfirm,
+        &:not(:focus):valid ~ .label-passconfirm {
+          translate: -16px -18px;
           scale: 0.8;
           background-color: $color-white;
         }
@@ -134,7 +226,7 @@
       }
     }
 
-    .login-submit {
+    .signup-submit {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -150,6 +242,7 @@
       cursor: pointer;
       font-size: 1rem;
       transition: 0.2s ease;
+      margin-top: 1rem;
 
       &:hover {
         background-color: $primary-color3;
@@ -199,6 +292,19 @@
       color: $color-gray;
       cursor: pointer;
       margin: 1rem 0 2rem 0;
+      gap: 0.5rem;
+
+      .fa-google {
+        background: -webkit-linear-gradient(
+          bottom,
+          #db4437,
+          #f4b400,
+          #0f9d58,
+          #4285f4
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
     }
   }
 }
