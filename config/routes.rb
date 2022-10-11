@@ -13,12 +13,15 @@ Rails.application.routes.draw do
     get 'sign_up', to: 'devise/registrations#new'
     get 'edit', to: 'users#edit'
     get 'address', to: 'address#index'
+    get 'profile', to: 'users#edit'
   end
 
   devise_scope :address do
     get 'address', to: 'address#index'
     get 'address/new', to: 'address#new'
   end
+  
+  resources :favorites
 
   resources :users , only: [:index, :show, :edit, :update] do
     resources :address

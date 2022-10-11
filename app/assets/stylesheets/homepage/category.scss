@@ -1,45 +1,70 @@
 .category {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  height: 8vh;
+  height: 6vh;
   border: 1px solid $color-background;
 
-  .categories {
+  .category-container {
     display: flex;
-    align-items: center;
-    gap: 1rem;
+    justify-content: space-evenly;
+    width: 80vw;
 
-    .shop-by-category {
-      font-size: 0.8rem;
-      padding: 8px;
-      border-radius: $category-border-radius;
-      background-color: $primary-color;
-      color: $color-white;
+    .categories {
       display: flex;
       align-items: center;
-      gap: 0.5rem;
-      cursor: pointer;
-      transition: 0.2s;
+      gap: 1rem;
 
-      &:hover {
-        background-color: $primary-color-light;
+      .shop-by-category {
+        font-size: 0.8rem;
+        padding: 8px;
+        border-radius: $category-border-radius;
+        background-color: $primary-color;
+        color: $color-white;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        cursor: pointer;
+        transition: 0.2s;
+
+        &:hover {
+          background-color: $primary-color-light;
+        }
+      }
+
+      .deals-today,
+      .special-prices,
+      .fresh,
+      .frozen,
+      .fruits,
+      .grains,
+      .vegetables {
+        padding: $category-padding;
+        border-radius: $category-border-radius;
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+        font-size: 0.9rem;
+        transition: 0.2s;
+        cursor: pointer;
+
+        .material-symbols-sharp {
+          font-size: 1rem;
+        }
+
+        &:hover {
+          background-color: $color-background;
+        }
       }
     }
 
-    .deals-today,
-    .special-prices,
-    .fresh,
-    .frozen,
-    .fruits,
-    .grains,
-    .vegetables {
+    .recently-viewed {
       padding: $category-padding;
       border-radius: $category-border-radius;
       display: flex;
       align-items: center;
       gap: 0.3rem;
-      font-size: 0.9rem;
+      font-size: 0.8rem;
       transition: 0.2s;
       cursor: pointer;
 
@@ -50,25 +75,6 @@
       &:hover {
         background-color: $color-background;
       }
-    }
-  }
-
-  .recently-viewed {
-    padding: $category-padding;
-    border-radius: $category-border-radius;
-    display: flex;
-    align-items: center;
-    gap: 0.3rem;
-    font-size: 0.8rem;
-    transition: 0.2s;
-    cursor: pointer;
-
-    .material-symbols-sharp {
-      font-size: 1rem;
-    }
-
-    &:hover {
-      background-color: $color-background;
     }
   }
 }

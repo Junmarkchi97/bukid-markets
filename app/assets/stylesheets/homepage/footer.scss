@@ -36,12 +36,11 @@
         flex-direction: column;
         font-size: 0.7rem;
         gap: 0.7rem;
-        margin: 1rem 0rem;
+        margin: 1rem 0;
 
         a {
           transition: 0.2s;
           text-decoration: none;
-          margin-left: 0.2rem;
 
           &:hover {
             color: $primary-color-light;

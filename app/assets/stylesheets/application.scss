@@ -2,10 +2,15 @@
 @import "variables";
 @import "homepage/homepage";
 @import "actiontext";
-@import "authentication/login/login";
+@import "authentication/login";
+@import "authentication/signup";
 
 html:focus-within {
   scroll-behavior: smooth;
+}
+
+html {
+  position: relative;
 }
 
 *,

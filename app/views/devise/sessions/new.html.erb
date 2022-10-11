@@ -1,6 +1,6 @@
 <div class="login-wrapper">
   <div class="login-image">
-    <img src="https://res.cloudinary.com/bukidmarkets/image/upload/v1664814046/GROWING_3_me4o03.png">
+    <%= image_tag("cover2.jpg")%>
   </div>
   <div class="login-container">
     <h2>Log in</h2>
@@ -34,8 +34,10 @@
           url: omniauth_authorize_path(resource_name, provider),
           method: :post,
           data: { turbo: "false"} do |g| %>
-            <%= g.button "Sign with Google", data: { turbo: false }, class: "login-google" %>
-          <%# <%= link_to "Sign in with #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider), method: :post %>
+            
+            <%= g.button "Sign with Google", data: { turbo: false }, class: "login-google" do %>
+              <i class="fa-brands fa-google"></i><span>Sign with Google</span>
+            <% end %>
         <% end %>
       <% end %>
     <% end %>
@@ -44,9 +46,6 @@
       <p>Dont have an account yet?</p>
       <%= link_to "Sign up", sign_up_path, class: "signup" %>
     </div>
-
-    <%# <%= render "devise/shared/links" %>
-    
   </div>
 </div>
-    <%= render 'layouts/notice' %>
+    <%# <%= render "devise/shared/links" %>

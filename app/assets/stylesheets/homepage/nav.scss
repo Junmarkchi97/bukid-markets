@@ -5,102 +5,127 @@
   // border: 1px solid black;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+  z-index: 2;
 
-  img {
-    // width: 25rem;
-  }
-
-  .search {
-    // border: 1px solid black;
-    padding: 0.6rem 1rem;
-    border-radius: 5px;
-    background-color: $color-background;
+  .header {
+    width: 80vw;
     display: flex;
     align-items: center;
+    justify-content: space-around;
 
-    span {
-      color: $color-gray;
-    }
-
-    select {
-      background-color: $color-background;
-      font-size: 0.7rem;
-      margin-right: 1rem;
-      font-weight: 600;
-      border: none;
-    }
-
-    .input {
-      background-color: $color-background;
-      padding: 0.5rem 1rem;
-      // position: relative;
-      border: none;
-
-      // &::before {
-      //   content: "";
-      //   position: absolute;
-      //   right: 0;
-      //   height: 51px;
-      //   width: 51px;
-      //   background: black;
-      //   display: inline-block;
-      //   margin: 1px;
-      // }
-    }
-  }
-
-  .user {
-    display: flex;
-    gap: 2rem;
-
-    .profile {
-      cursor: pointer;
-    }
-
-    .favorite {
+    a {
       display: flex;
-      position: relative;
-      cursor: pointer;
+      align-items: center;
       text-decoration: none;
 
-      .fav {
-        position: absolute;
-        top: -5px;
-        right: -5px;
-        height: 1rem;
-        min-width: 1rem;
-        padding: 1px;
-        border-radius: 2px;
-        background-color: $primary-color;
-        font-size: 0.8rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: $color-white;
+      img {
+        // width: 25rem;
+      }
+
+      .login,
+      .profile {
+        margin-left: 1rem;
+        margin-top: 1rem;
+        font-size: 1.7rem;
+        color: $primary-color;
       }
     }
 
-    .cart {
+    .search {
+      // border: 1px solid black;
+      padding: 0.6rem 1rem;
+      border-radius: 5px;
+      background-color: $color-background;
       display: flex;
-      position: relative;
-      cursor: pointer;
-      text-decoration: none;
+      align-items: center;
 
-      .shop {
-        position: absolute;
-        top: -5px;
-        right: -5px;
-        height: 1rem;
-        min-width: 1rem;
-        padding: 1px;
-        border-radius: 2px;
-        background-color: $primary-color;
-        font-size: 0.8rem;
+      span {
+        color: $color-gray;
+      }
+
+      select {
+        background-color: $color-background;
+        font-size: 0.7rem;
+        margin-right: 1rem;
+        font-weight: 600;
+        border: none;
+      }
+
+      .input {
+        background-color: $color-background;
+        padding: 0.5rem 1rem;
+        // position: relative;
+        border: none;
+
+        // &::before {
+        //   content: "";
+        //   position: absolute;
+        //   height: 51px;
+        //   width: 51px;
+        //   background: black;
+        //   display: inline-block;
+        //   margin: 1px;
+        // }
+      }
+    }
+
+    .user {
+      display: flex;
+      gap: 3rem;
+
+      a {
+        text-decoration: none;
+      }
+
+      .profile {
+        cursor: pointer;
+      }
+
+      .favorite {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        color: $color-white;
+        position: relative;
+        cursor: pointer;
+        text-decoration: none;
+
+        .fav {
+          position: absolute;
+          top: -5px;
+          right: -5px;
+          max-height: 1rem;
+          max-width: 1rem;
+          padding: 1px;
+          border-radius: 2px;
+          background-color: $primary-color;
+          font-size: 0.8rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: $color-white;
+        }
+      }
+
+      .cart {
+        display: flex;
+        position: relative;
+        cursor: pointer;
+        text-decoration: none;
+
+        .shop {
+          position: absolute;
+          top: -5px;
+          right: -5px;
+          height: 1rem;
+          min-width: 1rem;
+          padding: 1px;
+          border-radius: 2px;
+          background-color: $primary-color;
+          font-size: 0.8rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: $color-white;
+        }
       }
     }
   }

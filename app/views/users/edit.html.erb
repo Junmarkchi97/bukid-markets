@@ -1,2 +1,7 @@
 <%= render 'form', user: @user %>
 <%= link_to image_tag(@user.avatar.to_s, class: "image"), @user.avatar.to_s %>
+
+
+<%= link_to "Address" %>
+
+<%= link_to "Log Out", destroy_user_session_path, method: :delete %>

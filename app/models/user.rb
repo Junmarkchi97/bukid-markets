@@ -11,7 +11,6 @@ class User < ApplicationRecord
       user.password = Devise.friendly_token[0,20]
       user.full_name = auth.info.name
       user.google_avatar = auth.info.image
-      user.avatar = auth.info.image
       user.first_name = auth.info.first_name
       user.last_name = auth.info.last_name
       # if you are using confirmable and the provider(s) you use validate emails,

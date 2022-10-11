@@ -4,14 +4,193 @@
 
 .home {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
 
-  .card {
-    border: 1px solid black;
-    border-radius: 10px;
-    height: auto;
-    width: 15rem;
+  .cover-image {
+    width: 60vw;
+    height: 30vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .cover {
+      height: 25vh;
+      background-color: $color-white;
+      position: absolute;
+      opacity: 0.7;
+      left: 8vh;
+      right: 8vh;
+    }
+
+    .cover-details {
+      position: absolute;
+      left: 18vh;
+      right: 18vh;
+      top: 5vh;
+      bottom: 5vh;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-evenly;
+
+      span {
+        font-size: 4rem;
+        font-weight: 1000;
+        color: $primary-color;
+        line-height: 1;
+      }
+
+      .mini-sub {
+        color: $color-gray;
+        font-size: 1.5rem;
+      }
+
+      a {
+        padding: 0.5em 1em;
+        width: 9em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $primary-color;
+        color: white;
+        text-decoration: none;
+        user-select: none;
+      }
+    }
+
+    .image {
+      width: 100%;
+      height: 30vh;
+      object-fit: cover;
+      object-position: bottom;
+      opacity: 0.7;
+    }
+  }
+
+  .sub-title {
+    display: flex;
+    margin-top: 5rem;
+    font-size: 3rem;
+    width: 60vw;
+    color: $primary-color;
+  }
+
+  .products {
+    display: flex;
+    justify-content: center;
+    margin: 0 2rem 2rem 2rem;
+    gap: 2rem;
+    width: 50vw;
+    max-width: 60vw;
+    flex-wrap: wrap;
     padding: 1rem;
+
+    .card {
+      border-radius: 10px;
+      height: 20em;
+      width: 15em;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 0 5px $primary-color;
+      overflow: hidden;
+      position: relative;
+
+      &:hover .favorite,
+      &:hover .share {
+        opacity: 1;
+      }
+
+      .favorite {
+        transition: 0.5s;
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        cursor: pointer;
+        opacity: 0;
+        font-size: 1.5rem;
+        color: $color-white;
+      }
+
+      .share {
+        transition: 0.5s;
+        position: absolute;
+        top: 0.5rem;
+        left: 0.5rem;
+        cursor: pointer;
+        opacity: 0;
+        font-size: 1.5rem;
+        color: $color-white;
+      }
+
+      .image {
+        height: 80%;
+        width: 100%;
+
+        img {
+          max-width: 100%;
+          max-height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+
+      .details {
+        display: flex;
+        flex-direction: column;
+        padding: 0.5em 1em 1em;
+        gap: 0.5rem;
+        position: absolute;
+        bottom: 0;
+        background-color: white;
+        width: 100%;
+
+        .title {
+          font-size: 1.2em;
+          color: $primary-color3;
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+
+          span {
+            font-size: 0.5em;
+          }
+        }
+
+        .location {
+          display: flex;
+          align-items: center;
+          color: $color-info-dark;
+          font-size: 0.8rem;
+
+          .material-symbols-sharp {
+            font-size: 1rem;
+          }
+        }
+
+        .inquire {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          &:last-child {
+            color: $color-gray;
+            font-size: 0.9em;
+          }
+
+          button {
+            border: none;
+            color: $color-white;
+            padding: 0.8em 1.5em;
+            cursor: pointer;
+            background-color: $primary-color;
+          }
+        }
+      }
+    }
   }
 }

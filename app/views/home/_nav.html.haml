@@ -1,25 +1,43 @@
 .nav
-  %a{:href => "/"}
-    %img.image{:src => 'https://res.cloudinary.com/bukidmarkets/image/upload/v1664814046/GROWING_3_me4o03.png'}
-  .search
-    %select#drop-down{:name => "drop-down"}
-      %option{:value => "0"} All Categories
-      - if @categories
-        - @categories.collect do |cat|
-          %option{:value => cat.id }
-            = cat.name
-    %input.input{:placeholder => "I'm searching for.."}
-    %span.material-symbols-sharp
-      search
-  .user
-    %a.favorite{:href => "#"}
-      %span.material-symbols-sharp
-        favorite
-      .fav
-        143
-    - if current_user
-      %a.profile{:href => "#"}
+  .header
+    %a{:href => "/"}
+      %img.image{:src => 'https://res.cloudinary.com/bukidmarkets/image/upload/v1664814046/GROWING_3_me4o03.png'}
+      - if (request.path == '/sign_in' || request.path == '/users/sign_in')
+        %span.login
+          Log In
+      - elsif (request.path == '/profile')
+        %span.profile
+          Profile
+      - elsif (request.path == '/sign_up')
+        %span.profile
+          Register
+      - elsif (request.path == '/favorites')
+        %span.profile
+          Favorites
+    - if (request.path == '/')
+      .search
+        %select#drop-down{:name => "drop-down"}
+          %option{:value => "0"} All Categories
+          - if @categories
+            - @categories.collect do |cat|
+              %option{:value => cat.id }
+                = cat.name
+        %input.input{:placeholder => "I'm searching for.."}
         %span.material-symbols-sharp
-          person
-    - else
-      = link_to "Sign In", sign_in_path
+          search
+    .user
+      - if current_user
+        - if current_user.role == "buyer"
+          = link_to "Become a Seller", favorites_path
+        
+      %a.favorite{:href => "favorites"}
+        %span.material-symbols-sharp
+          favorite
+        .fav
+          12
+      - if current_user
+        %a.profile{:href => "profile"}
+          %span.material-symbols-sharp
+            person
+      - else
+        = link_to "Log In", sign_in_path

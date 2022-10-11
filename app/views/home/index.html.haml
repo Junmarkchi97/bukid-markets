@@ -1,13 +1,38 @@
 = render 'category'
 
 .home
-  - @products.each do |product|
-    .card
-      = product.title
-      = product.description
-      = "$#{product.price}"
-      %br
-
+  .cover-image
+    = image_tag("cover1.jpg", class:"image")
+    .cover
+    .cover-details
+      %span
+        Wholesale Suppliers
+      .mini-sub
+        High quality at Low prices, Fresh from Farm
+      = link_to "Shop Now", "#products"
+  .sub-title
+    %h1
+      Recently Listed
+  .products#products
+    - @products.each do |product|
+      .card
+        .image
+          = image_tag("mango.jpg")
+        .details
+          .title
+            = product.title
+            %span
+              junmarkchi97
+          .location
+            %span.material-symbols-sharp
+              location_on
+            Manila, Phillipines
+          .inquire
+            = button_to "Inquire Now"
+            = "₱#{product.price} / kilo"
+        .favorite
+          %i.fa-regular.fa-heart
+        .share
+          %i.fa-solid.fa-arrow-up-from-bracket
 
 = link_to "Products", products_path
-= render 'footer'
