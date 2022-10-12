@@ -8,4 +8,8 @@ class Product < ApplicationRecord
   validates :title, presence: true, length: { minimum: 2 }
   # validates :description, presence: true, length: { in: 1..1000 }
   validates :price, presence: true
+  validates :thumbnail, presence: true
+
+  mount_uploader :thumbnail, ImgUploader
+
 end

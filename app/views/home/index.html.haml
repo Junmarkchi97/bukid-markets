@@ -17,12 +17,12 @@
     - @products.each do |product|
       .card
         .image
-          = image_tag("mango.jpg")
+          = image_tag(product.thumbnail.to_s)
         .details
           .title
             = product.title
             %span
-              junmarkchi97
+              = User.find(product.user_id).full_name
           .location
             %span.material-symbols-sharp
               location_on

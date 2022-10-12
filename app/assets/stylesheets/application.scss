@@ -4,6 +4,7 @@
 @import "actiontext";
 @import "authentication/login";
 @import "authentication/signup";
+@import "products/products";
 
 html:focus-within {
   scroll-behavior: smooth;

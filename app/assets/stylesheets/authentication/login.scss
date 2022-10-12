@@ -36,9 +36,10 @@
     flex-direction: column;
     padding: 1rem;
     height: auto;
+    max-height: 20em;
     border-radius: 5px;
     background-color: $color-white;
-    width: 20rem;
+    width: 20em;
     user-select: none;
     z-index: 2;
     translate: 20vh;
@@ -60,7 +61,7 @@
 
     .new_user {
       display: flex;
-      gap: 1rem;
+      gap: 0.5rem;
       flex-direction: column;
     }
 
@@ -216,13 +217,13 @@
       border-radius: 3px;
       border: none;
       box-shadow: 0 0 2px $primary-color;
-      padding: 10px;
+      // padding: 10px;
       width: 100%;
       height: 2rem;
       background-color: $color-white;
       color: $color-gray;
       cursor: pointer;
-      margin: 1rem 0 2rem 0;
+      margin: 1rem 0 0rem 0;
       gap: 0.5rem;
 
       .fa-google {

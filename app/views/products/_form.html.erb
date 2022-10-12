@@ -6,28 +6,33 @@
       <ul>
         <% product.errors.each do |error| %>
           <li><%= error.full_message %></li>
-        <% end %>
+        <% end %> 
       </ul>
     </div>
   <% end %>
 
   <div>
-    <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
+    <%= form.label :Product_Title, class: "label-title" %>
+    <%= form.text_field :title, class:"input-title" %>
   </div>
 
   <div>
-    <%= form.label :price, style: "display: block" %>
+    <%= form.label :Price, class: "label-price" %>
     <%= form.text_field :price %>
   </div>
 
   <div>
-    <%= form.label :description, style: "display: block" %>
+    <%= form.label :Description, class: "label-description" %>
     <%= form.rich_text_area :description %>
   </div>
 
   <div>
-    <%= form.label :category, style: "display: block" %>
+    <%= form.label :thumbnail, class: "label-thumbnail" %>
+    <%= form.file_field :thumbnail, direct_upload: true %>
+  </div>
+
+  <div>
+    <%= form.label :category, class: "label-category" %>
     <%= form.select :category_id, options_for_select(@categories.collect { |category|  [category.name, category.id] }) %>
   </div>
 

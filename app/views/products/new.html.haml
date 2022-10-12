@@ -1,0 +1,8 @@
+.products-new
+  %h1
+    Create product listing
+  = render "form", product: @product
+  
+  %br
+  %div
+    = link_to "Back to products", products_path
