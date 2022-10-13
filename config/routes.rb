@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root to: 'home#index'
 
-  resources :categories, :products
+  resources :categories, :products, :favorites, :seller
   devise_for :users, controllers: {
     registrations: 'users/registrations',
     sessions: 'users/sessions',
@@ -12,31 +12,18 @@ Rails.application.routes.draw do
     get 'sign_in', to: 'devise/sessions#new'
     get 'sign_up', to: 'devise/registrations#new'
     get 'edit', to: 'users#edit'
-    get 'address', to: 'address#index'
     get 'profile', to: 'users#edit'
+    # get 'address', to: 'address#index'
   end
 
   devise_scope :address do
-    get 'address', to: 'address#index'
-    get 'address/new', to: 'address#new'
+    get 'address', to: 'addresses#edit'
   end
   
-  resources :favorites
-
   resources :users , only: [:index, :show, :edit, :update] do
-    resources :address
-    # , path_names: { edit: "" }
+    resource :addresses
   end
-  # , except: :show,
   # authenticated :user do
   #   root to: 'home#index', as: :root_app
-  # end
-
-  # devise_for :users, controllers: {
-  #   sessions: 'users/sessions'
-  # }
-
-  # devise_scope :user do
-  #   root to: 'devise/sessions#new'
   # end
 end

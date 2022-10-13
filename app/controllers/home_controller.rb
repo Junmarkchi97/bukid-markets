@@ -43,6 +43,7 @@ class HomeController < ApplicationController
     @categories = Category.all
   end
 
+
   def get_user_address
     if current_user
       @address = current_user.address

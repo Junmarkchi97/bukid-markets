@@ -1,8 +1,6 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!, only: [:show]
-  before_action :get_categories
-  before_action :get_user
-  before_action :get_address
+  before_action :get_categories,:get_user, :get_address
 
   def index
     @users = User.all
@@ -19,9 +17,9 @@ class UsersController < ApplicationController
   def update
     respond_to do |format|
       if current_user.update(user_params)
-        format.html {redirect_to current_user, notice: 'You successfully updated your profile.'}
+        format.html { redirect_to profile_path, notice: 'You successfully updated your profile.'}
       else 
-        format.html { render :edit }
+        format.html { render :edit, status: :unprocessable_entity }
       end
     end
   end

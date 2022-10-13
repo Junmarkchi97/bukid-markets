@@ -3,6 +3,7 @@
 class Users::RegistrationsController < Devise::RegistrationsController
   before_action :configure_sign_up_params, only: [:create]
   before_action :configure_account_update_params, only: [:update]
+  after_action :set_default_address
 
   # GET /resource/sign_up
   # def new
@@ -66,8 +67,17 @@ class Users::RegistrationsController < Devise::RegistrationsController
     sign_in_path
   end
 
+  def set_default_address
+    if current_user
+      if !current_user.address
+        address = current_user.build_address(street: "", barangay: "", city:"", postal_code:"", country: "Philippines", phone_number:"")
+        address.save
+      end
+    end
+  end
+
   # The path used after sign up for inactive accounts.
-  # def after_inactive_sign_up_path_for(resource)
-  #   super(resource)
-  # end
+  def after_inactive_sign_up_path_for(resource)
+    sign_in_path
+  end
 end

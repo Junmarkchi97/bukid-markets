@@ -5,6 +5,9 @@
 @import "authentication/login";
 @import "authentication/signup";
 @import "products/products";
+@import "maintenance/maintenance";
+@import "profile/profile";
+@import "address/address";
 
 html:focus-within {
   scroll-behavior: smooth;
@@ -42,4 +45,8 @@ body {
 
 .alert {
   color: $color-danger;
+}
+
+.message-error {
+  list-style-type: none;
 }

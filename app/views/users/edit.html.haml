@@ -1,0 +1,12 @@
+.profile-display
+  - if notice != nil
+    %p.notice= notice
+  -@user.errors.each do |error|
+    .error= error.full_message
+  .profile
+    .profile-nav
+      = link_to "Profile", profile_path
+      = link_to "Address", address_path
+      = link_to "Products", products_path
+    .profile-edit
+      = render 'form', user: @user

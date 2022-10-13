@@ -1,38 +1,32 @@
-<div >
-  <% @address.each do |add| %>
-  <p>
-    <strong>User:</strong>
-    <%= add.user_id %>
-  </p>
-
+<div id="<%= dom_id address %>">
   <p>
     <strong>Street:</strong>
-    <%= add.street %>
+    <%= address.street %>
   </p>
 
   <p>
     <strong>Barangay:</strong>
-    <%= add.barangay %>
+    <%= address.barangay %>
   </p>
 
   <p>
     <strong>City:</strong>
-    <%= add.city %>
+    <%= address.city %>
   </p>
 
   <p>
     <strong>Postal code:</strong>
-    <%= add.postal_code %>
+    <%= address.postal_code %>
   </p>
 
   <p>
     <strong>Country:</strong>
-    <%= add.country %>
+    <%= address.country %>
   </p>
 
   <p>
     <strong>Phone number:</strong>
-    <%= add.phone_number %>
+    <%= address.phone_number %>
   </p>
-<% end %>
+
 </div>

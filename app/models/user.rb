@@ -11,6 +11,7 @@ class User < ApplicationRecord
       user.password = Devise.friendly_token[0,20]
       user.full_name = auth.info.name
       user.google_avatar = auth.info.image
+      user.username = auth.info.email.split("@")[0]
       user.first_name = auth.info.first_name
       user.last_name = auth.info.last_name
       # if you are using confirmable and the provider(s) you use validate emails,
@@ -26,8 +27,8 @@ class User < ApplicationRecord
   enum role: [:buyer, :seller, :admin]
   after_initialize :set_default_role, :if => :new_record?
   
-  validates :first_name, :last_name, presence: true
-  # validates :username, length: { minimum: 3 }, uniqueness: true
+  validates :first_name, :last_name, presence: true, length: { minimum: 2 }
+  validates :username, length: { minimum: 3 }, uniqueness: true, presence: true
   validates :bio, length: { maximum: 100 } , allow_blank: true
   
   def set_default_role

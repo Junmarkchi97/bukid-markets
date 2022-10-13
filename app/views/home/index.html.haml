@@ -22,17 +22,16 @@
           .title
             = product.title
             %span
-              = User.find(product.user_id).full_name
+              = User.find(product.user_id).username
           .location
             %span.material-symbols-sharp
               location_on
-            Manila, Phillipines
+            = User.find(product.user_id).address.city
+            = User.find(product.user_id).address.country
           .inquire
-            = button_to "Inquire Now"
+            = link_to "Inquire Now", product
             = "₱#{product.price} / kilo"
         .favorite
           %i.fa-regular.fa-heart
         .share
           %i.fa-solid.fa-arrow-up-from-bracket
-
-= link_to "Products", products_path

@@ -1,0 +1,268 @@
+.profile-display {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem;
+
+  .notice {
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: $border-radius-1;
+    background-color: $primary-color;
+  }
+
+  .error {
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    color: $color-danger;
+  }
+
+  .profile {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    height: auto;
+    width: 70rem;
+    max-width: 60vw;
+
+    .profile-nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      border-right: 2px solid $color-gray;
+      height: 100%;
+
+      a {
+        text-decoration: none;
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+
+    .profile-edit {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      // padding: 0 3rem;
+
+      .profile-form {
+        display: flex;
+        flex-direction: column;
+        min-width: 30rem;
+        gap: 0.5rem;
+
+        .container {
+          display: flex;
+          justify-content: space-evenly;
+          width: auto;
+          align-items: flex-end;
+
+          .fields {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            align-items: flex-end;
+
+            .field-username,
+            .field-first,
+            .field-last {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              gap: 0.3rem;
+
+              .label-username,
+              .label-first,
+              .label-last {
+                color: $primary-color4;
+              }
+
+              .input-username,
+              .input-first,
+              .input-last {
+                padding: 0.3rem 0.5rem;
+                color: $primary-color;
+                border-radius: 3px;
+                border: 1px solid $color-gray;
+                font-family: "Poppins", sans-serif;
+                font-weight: 500;
+                font-size: 1rem;
+                color: $primary-color;
+                transition: 0.2s;
+
+                &:focus {
+                  border: 1px solid $primary-color;
+                  box-shadow: 0 0 3px 1px $primary-color;
+                }
+              }
+            }
+          }
+
+          .image-container {
+            height: 14rem;
+            width: 14rem;
+            border-radius: 10px;
+            margin: 1rem;
+            translate: 1rem 2rem;
+
+            & > input {
+              display: none;
+            }
+
+            & > label {
+              cursor: pointer;
+              border-radius: 50%;
+              overflow: hidden;
+
+              &:hover .material-symbols-sharp {
+                opacity: 1;
+              }
+            }
+
+            .material-symbols-sharp {
+              position: absolute;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              // color: $primary-color;
+              color: white;
+              font-size: 2rem;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              margin: auto;
+              opacity: 0;
+              transition: 0.2s;
+            }
+
+            img {
+              height: 100%;
+              width: 100%;
+              object-fit: cover;
+              object-position: center;
+              border: 3px solid $primary-color;
+              border-radius: 50%;
+            }
+          }
+        }
+
+        .field-email {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 0.2rem;
+
+          .label-email {
+            color: $primary-color4;
+          }
+
+          .input-email {
+            padding: 0.3rem 0.5rem;
+            color: $primary-color;
+            border-radius: 3px;
+            border: 1px solid $color-gray;
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+            font-size: 1rem;
+            color: $primary-color;
+            transition: 0.2s;
+            background-color: $color-background;
+            cursor: not-allowed;
+            user-select: none;
+
+            &:focus {
+              border: 1px solid $primary-color;
+              box-shadow: 0 0 3px 1px $primary-color;
+            }
+          }
+        }
+
+        .field-bio {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 0.2rem;
+
+          h5 {
+            color: $primary-color;
+            font-weight: 300;
+          }
+
+          .label-bio {
+            color: $primary-color4;
+          }
+
+          .input-bio {
+            padding: 0.3rem 0.5rem;
+            color: $primary-color;
+            border-radius: 3px;
+            border: 1px solid $color-gray;
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+            font-size: 1rem;
+            color: $primary-color;
+            transition: 0.2s;
+
+            &:focus {
+              border: 1px solid $primary-color;
+              box-shadow: 0 0 3px 1px $primary-color;
+            }
+          }
+        }
+
+        .actions {
+          display: flex;
+          gap: 1rem;
+          justify-content: space-between;
+          margin: 1rem 0;
+
+          .field-save {
+            padding: 0.7rem 1rem;
+            cursor: pointer;
+            color: $color-white;
+            background-color: $primary-color;
+            border: none;
+            border-radius: $border-radius-1;
+            transition: 0.2s;
+            height: 2.5rem;
+            display: flex;
+            align-items: center;
+
+            &:hover {
+              background-color: $primary-color3;
+            }
+
+            &:active {
+              background-color: $primary-color4;
+            }
+          }
+
+          .field-logout {
+            align-items: center;
+            padding: 0.5em 1em;
+            font-size: 0.9em;
+            cursor: pointer;
+            color: $primary-color;
+            background-color: $color-white;
+            border: 1px solid $primary-color;
+            border-radius: $border-radius-1;
+            text-decoration: none;
+            transition: 0.2s;
+            display: flex;
+            align-items: center;
+
+            &:hover {
+              background-color: $primary-color3;
+              color: $color-white;
+            }
+          }
+        }
+      }
+    }
+  }
+}

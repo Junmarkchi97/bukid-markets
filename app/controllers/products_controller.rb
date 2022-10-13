@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :set_product,:set_user, only: %i[ show edit update destroy ]
+  before_action :set_product, only: %i[ show edit update destroy ]
   before_action :set_categories
 
   # GET /products or /products.json
@@ -26,7 +26,7 @@ class ProductsController < ApplicationController
 
     respond_to do |format|
       if @product.save
-        format.html { redirect_to product_url(@product), notice: "Product was successfully created." }
+        format.html { redirect_to products_path, notice: "Product was successfully created." }
         format.json { render :show, status: :created, location: @product }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -65,7 +65,7 @@ class ProductsController < ApplicationController
     end
 
     def set_user
-      @user = current_user.id
+      @user = current_user
     end
 
     # Only allow a list of trusted parameters through.

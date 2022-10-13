@@ -1,4 +1,7 @@
 <div class="login-wrapper">
+  <% if notice != nil %>
+    <p class="notice"><%= notice %></p>
+  <% end %>
   <div class="login-image">
     <%= image_tag("cover2.jpg")%>
   </div>
@@ -42,9 +45,9 @@
       <% end %>
     <% end %>
 
-    <div class="signup">
+    <div class="login">
       <p>Dont have an account yet?</p>
-      <%= link_to "Sign up", sign_up_path, class: "signup" %>
+      <%= link_to "Sign up", sign_up_path %>
     </div>
   </div>
 </div>

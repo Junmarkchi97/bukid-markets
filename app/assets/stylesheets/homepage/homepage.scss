@@ -59,6 +59,15 @@
         color: white;
         text-decoration: none;
         user-select: none;
+        transition: 0.2s;
+
+        &:hover {
+          background-color: $primary-color3;
+        }
+
+        &:active {
+          background-color: $primary-color4;
+        }
       }
     }
 
@@ -128,14 +137,22 @@
       }
 
       .image {
-        height: 80%;
+        height: 100%;
         width: 100%;
 
         img {
           max-width: 100%;
+          height: auto;
+          min-height: 70%;
+          width: auto;
           max-height: 100%;
           object-fit: cover;
           object-position: center;
+          transition: 0.5s ease;
+
+          &:hover {
+            scale: 1.05;
+          }
         }
       }
 
@@ -182,12 +199,23 @@
             font-size: 0.9em;
           }
 
-          button {
+          a {
             border: none;
             color: $color-white;
             padding: 0.8em 1.5em;
             cursor: pointer;
             background-color: $primary-color;
+            text-decoration: none;
+            font-size: 0.8rem;
+            transition: 0.2s;
+
+            &:hover {
+              background-color: $primary-color3;
+            }
+
+            &:active {
+              background-color: $primary-color4;
+            }
           }
         }
       }

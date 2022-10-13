@@ -7,6 +7,7 @@
   <p>
     <strong>Price:</strong>
     <%= product.price %>
+    Per Kilo
   </p>
   <p>
     <strong>Category:</strong>
@@ -17,4 +18,22 @@
     <strong>Description:</strong>
     <%= product.description %>
   </p>
+
+  <p>
+    <strong>Phone Number:</strong>
+    <%= User.find(product.user_id).address.phone_number %>
+  </p>
+
+  <p>
+    <strong>Seller:</strong>
+    <%= User.find(product.user_id).username %>
+  </p>
+
+  <p>
+    <strong>Location:</strong>
+    <%= User.find(product.user_id).address.city %>,
+    <%= User.find(product.user_id).address.country %>
+  </p>
+
+  
 </div>

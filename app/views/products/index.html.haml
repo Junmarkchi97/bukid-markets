@@ -1,0 +1,14 @@
+.profile-display
+  - if notice != nil
+    %p.notice= notice
+  .profile
+    .profile-nav
+      = link_to "Profile", profile_path
+      = link_to "Address", address_path
+      = link_to "Products", products_path
+    .profile-edit
+      - @products.each do |product|
+        - if product.user_id == current_user.id
+          = render product
+          = link_to "Show", product
+      = link_to "New", new_product_path

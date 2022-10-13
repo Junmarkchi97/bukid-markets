@@ -3,6 +3,7 @@
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   # You should configure your model like this:
   # devise :omniauthable, omniauth_providers: [:twitter]
+  after_action :set_default_address
 
   # You should also create an action method in this controller like this:
   # def twitter
@@ -11,14 +12,18 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def google_oauth2
     user = User.from_omniauth(auth)
 
-    if user.present?  
-      sign_out_all_scopes
-      flash[:success] = t 'devise.omniauth_callbacks.success', kind: 'Google'
-      sign_in_and_redirect user, event: :authentication
+    if User.find_by(email: user.email).provider == nil
+      redirect_to sign_in_path, notice: "Email already exists. Try signing in with Google"
     else
-      flash[:alert] = 
-      t 'devise.omniauth_callbacks.failure', kind: 'Google', reason: "#{auth.info.email} is not authorized."
-      redirect_to new_user_session_path
+      if user.present?  
+        sign_out_all_scopes
+        flash[:success] = t 'devise.omniauth_callbacks.success', kind: 'Google'
+        sign_in_and_redirect user, event: :authentication
+      else
+        flash[:alert] = 
+        t 'devise.omniauth_callbacks.failure', kind: 'Google', reason: "#{auth.info.email} is not authorized."
+        redirect_to new_user_session_path
+      end
     end
   end
 
@@ -53,6 +58,15 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   private
+
+  def set_default_address
+    if current_user
+      if !current_user.address
+        address = current_user.build_address(street: "", barangay: "", city:"", postal_code:"", country: "Philippines", phone_number:"")
+        address.save
+      end
+    end
+  end
 
   def auth
     @auth ||= request.env['omniauth.auth']
