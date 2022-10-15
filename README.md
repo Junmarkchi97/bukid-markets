@@ -77,12 +77,6 @@ From your command line:
 
 The MIT License (MIT) 2022 - [Junmark Chi](https://github.com/Junmarkchi97/). Please have a look at [LICENSE.md](LICENSE.md) for more details.
 
-- Users should be able to create an account as a Buyer or Seller.
-- Sellers should be able to list a product and sell on the website.
-- Buyers should be able to see the location of the seller.
-- Buyers should be able to see products based on searched keyword.
-- Buyers should be able to see products based on category.
-
 ---
 
 > GitHub [@Junmarkchi97](https://github.com/Junmarkchi97) &nbsp;&middot;&nbsp;
