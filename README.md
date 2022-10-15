@@ -33,21 +33,34 @@
 
 From your command line:
 
+##### 1. Clone this repository
+
+```bash
+    $ git clone https://github.com/Junmarkchi97/bukid-markets
 ```
-# Clone this repository
-$ git clone https://github.com/Junmarkchi97/bukid-markets
 
-# Go into repository
-$ cd bukid-markets
+##### 2. Go into repository
 
-# Install needed gems
-$ bundle install
+```bash
+    $ cd bukid-markets
+```
 
-# Setup Database
-$ rails db:setup
+##### 3. Install needed gems
 
-# Run the server
-$ rails server
+```ruby
+    $ bundle install
+```
+
+##### 4. Setup Database
+
+```ruby
+    $ rails db:setup
+```
+
+##### 5. Start the application
+
+```ruby
+    $ rails server
 ```
 
 ## Roadmap
@@ -62,7 +75,7 @@ $ rails server
 
 ## License
 
-The MIT License (MIT) 2022 - [Junmark Chi](https://github.com/Junmarkchi97/). Please have a look at the [LICENSE.md](LICENSE.md) for more details.
+The MIT License (MIT) 2022 - [Junmark Chi](https://github.com/Junmarkchi97/). Please have a look at [LICENSE.md](LICENSE.md) for more details.
 
 <p align="right">(<a href="#top">Back to top</a>)</p>
 
