@@ -79,7 +79,7 @@
           position: relative;
 
           .input-price {
-            padding: 0.6em 1em 0.6em 2em;
+            padding: 0.4em 1em 0.4em 2em;
             color: $primary-color;
             border-radius: 3px;
             border: 1px solid $color-gray;
@@ -224,24 +224,53 @@
       }
     }
 
-    .product-submit {
+    .add-back {
       display: flex;
-      justify-self: center;
-      align-self: center;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      cursor: pointer;
-      border: 1px solid $primary-color;
-      background-color: $primary-color;
-      color: $color-white;
-      transition: 0.2s;
+      justify-content: space-between;
 
-      &:hover {
-        background-color: $primary-color3;
+      .product-submit {
+        display: flex;
+        justify-self: center;
+        align-self: center;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+        border: 1px solid $primary-color;
+        background-color: $primary-color;
+        color: $color-white;
+        transition: 0.2s;
+
+        &:hover {
+          background-color: $primary-color3;
+        }
+
+        &:active {
+          background-color: $primary-color4;
+        }
       }
 
-      &:active {
-        background-color: $primary-color4;
+      a {
+        display: flex;
+        justify-self: center;
+        align-self: center;
+        padding: 0.4rem 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+        border: 1px solid $primary-color;
+        background-color: $color-white;
+        color: $primary-color3;
+        transition: 0.2s;
+        font-size: 0.8rem;
+        text-decoration: none;
+
+        &:hover {
+          color: $color-white;
+          background-color: $primary-color3;
+        }
+
+        &:active {
+          background-color: $primary-color4;
+        }
       }
     }
   }

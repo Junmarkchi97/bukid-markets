@@ -27,12 +27,15 @@
               search
             %input{:placeholder => "Search"}
       .products
-        - @products.each do |product|
+        - @products.each_with_index do |product, index|
           - if product.user_id == current_user.id
             .user-product
               .title
-                %h3
-                  = product.title
+                %h2
+                  %span
+                    #{index + 1}.
+                  .prod-title
+                    #{product.title}
                 .icons
                   %a{:href => "products/#{product.id}/edit"} 
                     %span.material-symbols-sharp
@@ -40,7 +43,15 @@
                   = button_to product, method: :delete do
                     %span.material-symbols-sharp
                       delete
-              Price:
-              = product.price
-              %br
-              Views
+              .body
+                .price
+                  Price: #{product.price} / Kilo
+                .description-thumbnail
+                  .desc
+                    Description:
+                    = product.description
+                  .thumbnail
+                    Thumbnail:
+                    %a{:href => product.thumbnail.to_s}
+                      = image_tag(product.thumbnail.to_s, class:"thumbnail-image")
+

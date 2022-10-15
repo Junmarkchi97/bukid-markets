@@ -21,3 +21,5 @@
 Category.find_or_create_by(name: "Fruits")
 Category.find_or_create_by(name: "Vegetables")
 Category.find_or_create_by(name: "Grains")
+Category.find_or_create_by(name: "Frozen")
+Category.find_or_create_by(name: "Fresh")
