@@ -40,7 +40,8 @@
     .user
       - if current_user
         - if current_user.role == "buyer"
-          = link_to "Become a Seller", seller_index_path
+          - if !(request.path == '/seller')
+            = link_to "Become a Seller", seller_index_path
         
       %a.favorite{:href => "favorites"}
         %span.material-symbols-sharp

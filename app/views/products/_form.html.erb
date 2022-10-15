@@ -50,6 +50,12 @@
       <%= form.file_field :thumbnail, direct_upload: true, class:"input-thumbnail" %>
     </div>
 
-    <%= form.button "Add Product", class: "product-submit", data: {turbo: false, disable_with: "<i class='fa-solid fa-spinner fast-spin'></i>"} %>
+    <%= form.button "Add Product", class: "product-submit", data: {turbo: false, disable_with: "<i class='fa-solid fa-spinner fast-spin'></i>"} do %>
+      <% if request.path == "/products/new" %>
+        Add Product
+      <% else %>
+        Update
+      <% end %>
+    <% end %>
   <% end %>
 </div>

@@ -13,7 +13,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     user = User.from_omniauth(auth)
 
     if User.find_by(email: user.email).provider == nil
-      redirect_to sign_in_path, notice: "Email already exists. Try signing in with Google"
+      redirect_to sign_in_path, notice: "Email already exists. Try signing in using your email."
     else
       if user.present?  
         sign_out_all_scopes

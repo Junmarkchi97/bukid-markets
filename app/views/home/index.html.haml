@@ -26,8 +26,7 @@
           .location
             %span.material-symbols-sharp
               location_on
-            = User.find(product.user_id).address.city
-            = User.find(product.user_id).address.country
+            #{User.find(product.user_id).address.city}, #{User.find(product.user_id).address.country}
           .inquire
             = link_to "Inquire Now", product
             = "₱#{product.price} / kilo"

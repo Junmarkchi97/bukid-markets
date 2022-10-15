@@ -1,0 +1,42 @@
+.seller-centre
+  .seller
+    .buttons
+      .dashboard
+        - if current_user.avatar?
+          = image_tag(current_user.avatar.to_s)
+        - elsif current_user.google_avatar?
+          = image_tag(current_user.google_avatar.to_s)
+        .dashboard-container
+          %h2
+            Dashboard
+          %h5
+            Hello, #{current_user.first_name} #{current_user.last_name} 👋
+      = link_to "Post a Product", new_product_path
+    .your-posting
+      .posting
+        %h3
+          Your Postings
+        .categories
+          = button_to "Active" do
+            Active (#{@products.count})
+          .search
+            %span.material-symbols-sharp
+              search
+            %input{:placeholder => "Search"}
+      .products
+        - @products.each do |product|
+          - if product.user_id == current_user.id
+            .user-product
+              .title
+                %h3
+                  = product.title
+                .icons
+                  %a{:href => "products/#{product.id}/edit"} 
+                    %span.material-symbols-sharp
+                      edit_square
+                  %span.material-symbols-sharp
+                    delete
+              Price:
+              = product.price
+              %br
+              Views

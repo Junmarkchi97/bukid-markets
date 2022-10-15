@@ -2,13 +2,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 6vh;
+  height: 4rem;
   border: 1px solid $color-background;
 
   .category-container {
     display: flex;
     justify-content: space-evenly;
-    width: 80vw;
+    width: 110rem;
 
     .categories {
       display: flex;

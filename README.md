@@ -4,14 +4,15 @@
 
 ---
 
-- Users should be able to create an account as a Buyer or Seller.
-- Sellers should be able to list a product and sell on the website.
-- Buyers should be able to see the location of the seller.
-- Buyers should be able to see products based on searched keyword.
-- Buyers should be able to see products based on category.
+- Users should be able to list a product and sell on the website.
+- Users should be able to access the Profile page to edit the users informations.
+- Users should be able to login using Google
+- Users should be able to see the location of the seller.
+- Users should be able to see products based on category.
+- Users should be able to see products based on searched keyword.
 
 ---
 
 ## **Version2**
 
-`To be Decided`
+- TBD -
