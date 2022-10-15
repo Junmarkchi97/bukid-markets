@@ -1,5 +1,4 @@
-<br id="top">
-<h1 align="center" >
+<h1 align="center" id="top">
   <img src="https://raw.githubusercontent.com/Junmarkchi97/bukid-markets/main/app/assets/images/logo.png" alt="Bukid Markets Logo">
   <a href="https://res.cloudinary.com/bukidmarkets/image/upload/v1665735249/lrfkrzylzknoohqssyy5.jpg" alt="BukidMarkets" width="200"></a>
   <br>
@@ -26,12 +25,13 @@
 <p align="center">
   <a href="#getting-started">Getting Started</a> •
   <a href="#roadmap">Roadmap</a> •
-  <a href="#license">License</a>
+  <a href="#license">License</a> •
+  <a href="#links">Links</a>
 </p>
 
-## Getting Started
+## 🤸 Getting Started
 
-From your command line:
+#### From your command line:
 
 ##### 1. Clone this repository
 
@@ -39,7 +39,7 @@ From your command line:
     $ git clone https://github.com/Junmarkchi97/bukid-markets
 ```
 
-##### 2. Go into repository
+##### 2. Go into folder
 
 ```bash
     $ cd bukid-markets
@@ -63,7 +63,7 @@ From your command line:
     $ rails server
 ```
 
-## Roadmap
+## 🗺 Roadmap
 
 - [x] Add Devise Authentication
 - [x] Add Google OAuth
@@ -73,13 +73,13 @@ From your command line:
 - [ ] Add messaging feature
 - [ ] Finalize Front End
 
-## License
+## 📜 License
 
 The MIT License (MIT) 2022 - [Junmark Chi](https://github.com/Junmarkchi97/). Please have a look at [LICENSE.md](LICENSE.md) for more details.
 
 ---
 
-<div align="center">
+<div align="center" id="links">
 
 GitHub [@Junmarkchi97](https://github.com/Junmarkchi97) &nbsp;&middot;&nbsp;
 LinkedIn [@junmarkchi](https://www.linkedin.com/in/junmarkchi/) &nbsp;&middot;&nbsp;

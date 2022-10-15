@@ -1,4 +1,7 @@
+
 .seller-centre
+  - if notice != nil
+    %p.notice= notice
   .seller
     .buttons
       .dashboard
@@ -34,8 +37,9 @@
                   %a{:href => "products/#{product.id}/edit"} 
                     %span.material-symbols-sharp
                       edit_square
-                  %span.material-symbols-sharp
-                    delete
+                  = button_to product, method: :delete do
+                    %span.material-symbols-sharp
+                      delete
               Price:
               = product.price
               %br
