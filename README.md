@@ -1,6 +1,6 @@
 <br id="top">
 <h1 align="center" >
-  <img src="test" alt="Bukid Markets Logo">
+  <img src="https://raw.githubusercontent.com/Junmarkchi97/bukid-markets/main/app/assets/images/logo.png" alt="Bukid Markets Logo">
   <a href="https://res.cloudinary.com/bukidmarkets/image/upload/v1665735249/lrfkrzylzknoohqssyy5.jpg" alt="BukidMarkets" width="200"></a>
   <br>
   Bukid Markets
@@ -12,7 +12,7 @@
 <p align="center">
  <img src="https://img.shields.io/badge/Ruby-v3.1.2-green">
  <img src="https://img.shields.io/badge/Rails-v7.0.4-yellowgreen">
- <img src="https://img.shields.io/badge/Version-0.9.0-blue">
+ <img src="https://img.shields.io/badge/Version-1.0.0-blue">
  <a href="https://www.paypal.me/Junmarkchi">
     <img src="https://img.shields.io/badge/♡-donate-ff69b4.svg?maxAge=2592000&amp;style    =flat">
  </a>
@@ -79,8 +79,12 @@ The MIT License (MIT) 2022 - [Junmark Chi](https://github.com/Junmarkchi97/). Pl
 
 ---
 
-> GitHub [@Junmarkchi97](https://github.com/Junmarkchi97) &nbsp;&middot;&nbsp;
-> LinkedIn [@junmarkchi](https://www.linkedin.com/in/junmarkchi/) &nbsp;&middot;&nbsp;
-> Twitter [@junmark_chi](https://twitter.com/junmark_chi)
+<div align="center">
+
+GitHub [@Junmarkchi97](https://github.com/Junmarkchi97) &nbsp;&middot;&nbsp;
+LinkedIn [@junmarkchi](https://www.linkedin.com/in/junmarkchi/) &nbsp;&middot;&nbsp;
+Twitter [@junmark_chi](https://twitter.com/junmark_chi)
+
+</div>
 
 ---
