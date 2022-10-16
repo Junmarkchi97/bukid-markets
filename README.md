@@ -29,7 +29,7 @@
   <a href="#links">Links</a>
 </p>
 
-<img src="./app/assets/images/gif.gif" id="1"/>
+<img src="./app/assets/images/gif.gif" width="100%"/>
 
 ## 🤸 Getting Started
 
