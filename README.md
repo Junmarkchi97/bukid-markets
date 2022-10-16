@@ -29,6 +29,14 @@
   <a href="#links">Links</a>
 </p>
 
+![gif](https://github.com/Junmarkchi97/bukid-markets/main/app/assets/images/gif.gif)
+
+https://raw.githubusercontent.com/Junmarkchi97/bukid-markets/main/app/assets/images/gif.gif
+
+<img src="./app/assets/images/gif.gif"/>
+<img src="./assets/images/gif.gif"/>
+<img src="./main/assets/images/gif.gif"/>
+
 ## 🤸 Getting Started
 
 #### From your command line:
