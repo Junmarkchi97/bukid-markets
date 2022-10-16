@@ -82,5 +82,5 @@ test:
 production:
   <<: *default
   database: final_production
-  username: junmarkchi
-  password: junmarkchi
+  username: postgres
+  password: postgres
