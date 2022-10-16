@@ -81,6 +81,6 @@ test:
 #
 production:
   <<: *default
-  database: `{{process.env.DATABASE}}`
-  username: `{{process.env.DATABASE_USERNAME}}`
-  password: `{{process.env.DATABASE_PASSWORD}}`
+  database: d7dv0vkoc7pae5
+  username: scjibbleljpvar
+  password: d25640326babb6186589cd2de455e06349c7e5d55ad3988341a7a5cf7bd72b0b
