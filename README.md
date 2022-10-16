@@ -11,7 +11,7 @@
 <p align="center">
  <img src="https://img.shields.io/badge/Ruby-v3.1.2-green">
  <img src="https://img.shields.io/badge/Rails-v7.0.4-yellowgreen">
- <img src="https://img.shields.io/badge/Version-1.0.0-blue">
+ <img src="https://img.shields.io/badge/Version-0.9.0-blue">
  <a href="https://www.paypal.me/Junmarkchi">
     <img src="https://img.shields.io/badge/♡-donate-ff69b4.svg?maxAge=2592000&amp;style    =flat">
  </a>

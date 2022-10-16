@@ -14,7 +14,7 @@
     %h1
       Recently Listed
   .products#products
-    - @products.each do |product|
+    - @products.order(:id).each do |product|
       .card
         .image
           = image_tag(product.thumbnail.to_s)

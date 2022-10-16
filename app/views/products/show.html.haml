@@ -1,0 +1,37 @@
+.display-inquire
+  .inquire
+    .thumbnail
+      = image_tag(@product.thumbnail.to_s)
+    .header-inquire
+      .title
+        = @product.title
+      .price
+        ₱#{@product.price} / Kilo
+    .body-inquire
+      .description
+        Description:
+        = @product.description
+      .chat
+        .seller
+          - if User.find(@product.user_id).avatar?
+            = image_tag(User.find(@product.user_id).avatar.to_s)
+          - else
+            = image_tag(User.find(@product.user_id).google_avatar.to_s)
+          @#{User.find(@product.user_id).username}
+        %div
+          %i.fa-solid.fa-phone
+          = User.find(@product.user_id).address.phone_number
+        %div
+          %a{:href => "mailto:#{User.find(@product.user_id).email}"}
+            %i.fa-solid.fa-envelope
+            = User.find(@product.user_id).email
+        %div
+          %i.fa-solid.fa-location-dot
+          #{User.find(@product.user_id).address.city}, #{User.find(@product.user_id).address.country}
+        %button
+          Message
+
+
+
+
+    

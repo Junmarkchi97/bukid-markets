@@ -1,0 +1,132 @@
+.display-inquire {
+  height: auto;
+  display: flex;
+  align-self: center;
+  width: 100%;
+  justify-content: center;
+
+  .inquire {
+    margin: 2rem;
+    width: 60rem;
+
+    .thumbnail {
+      object-fit: cover;
+      background-image: url("/background.jpg");
+      background-size: cover;
+      overflow: hidden;
+      border-radius: 10px;
+      background-color: white;
+
+      img {
+        height: 20rem;
+        border-radius: 10px;
+        object-fit: contain;
+        backdrop-filter: blur(5rem);
+      }
+    }
+
+    .header-inquire {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0 1rem;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 1px;
+        background: $primary-color;
+        bottom: 0;
+        opacity: 0.7;
+      }
+
+      .title {
+        color: $primary-color;
+        font-size: 2rem;
+        margin: 1rem 0;
+        font-weight: 500;
+      }
+
+      .price {
+        color: $primary-color;
+        font-size: 2rem;
+        font-weight: 700;
+      }
+    }
+
+    .body-inquire {
+      display: flex;
+      justify-content: space-between;
+
+      .description {
+        margin: 1rem 0;
+        color: $primary-color;
+        font-size: 1.2rem;
+
+        .trix-content {
+          padding: 1rem;
+        }
+      }
+
+      .chat {
+        margin: 1rem 0;
+        padding: 1rem;
+        box-shadow: 0 0 5px 1px $primary-color;
+        border-radius: 10px;
+        gap: 0.5rem;
+        display: flex;
+        flex-direction: column;
+
+        .seller {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          color: $primary-color;
+
+          img {
+            height: 2.5rem;
+            width: 2.5rem;
+            border-radius: 50%;
+          }
+        }
+
+        div {
+          display: inherit;
+          gap: 0.5rem;
+          align-items: center;
+          color: $primary-color;
+
+          a {
+            display: inherit;
+            align-items: center;
+            color: $primary-color;
+            gap: 0.5rem;
+            text-decoration: none;
+          }
+        }
+
+        button {
+          padding: 0.5em 1em;
+          margin-top: 1rem;
+          border-radius: $border-radius-1;
+          color: $color-white;
+          background-color: $primary-color;
+          border: none;
+          cursor: pointer;
+          font-size: 1em;
+          transition: 0.2s;
+
+          &:hover {
+            background-color: $primary-color3;
+          }
+
+          &:active {
+            background-color: $primary-color4;
+          }
+        }
+      }
+    }
+  }
+}

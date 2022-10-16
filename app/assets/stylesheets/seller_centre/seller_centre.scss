@@ -158,7 +158,8 @@
         border-top: 0;
         box-shadow: 0px 0px 2px $primary-color;
         overflow-y: scroll;
-        height: 30rem;
+        max-height: 30rem;
+        height: auto;
 
         &::-webkit-scrollbar {
           width: 10px;
