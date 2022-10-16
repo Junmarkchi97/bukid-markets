@@ -81,6 +81,6 @@ test:
 #
 production:
   <<: *default
-  database: postgres
-  username: postgres
-  password: postgres
+  database: `{{process.env.DATABASE}}`
+  username: `{{process.env.DATABASE_USERNAME}}`
+  password: `{{process.env.DATABASE_PASSWORD}}`
