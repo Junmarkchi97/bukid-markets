@@ -24,13 +24,24 @@
 
 <p align="center">
   <a href="https://bukidmarkets.herokuapp.com/">Live Demo</a> •
+  <a href="#overview">Overview</a> •
   <a href="#getting-started">Getting Started</a> •
   <a href="#roadmap">Roadmap</a> •
   <a href="#license">License</a> •
-  <a href="#links">Links</a>
+  <a href="#links">Links</a> •
+  <a href="https://github.com/Junmarkchi97/bukid-markets/issues">Report Bug</a>
 </p>
 
 <img src="./app/assets/images/gif.gif" width="100%"/>
+
+## 📰 Overview
+Bukid Markets was built to be a go-to web app for farmers to list and sell their fresh produce. It enables farmers to sell to a broader set of customers by going modern and expanding their area of coverage. This web app enables users to register an account or login via google. Sellers can list and display their item on the marketplace while Buyers can browse and view the marketplace without a registered account.
+
+#### 📒 Test User Account
+Email: `bukidmarkets.test@gmail.com` <br>
+Password: `password`
+
+Login Here ➡️ <a href="https://bukidmarkets.herokuapp.com/">Live Demo</a>
 
 ## 🤸 Getting Started
 
