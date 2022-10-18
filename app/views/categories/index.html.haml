@@ -1,0 +1,8 @@
+%p{style: "color: green"}= notice
+%h1 Categories
+#categories
+  - @categories.each do |category|
+    = render category
+    %p
+      = link_to "Show this category", category
+= link_to "New category", new_category_path

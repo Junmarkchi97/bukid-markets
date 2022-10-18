@@ -1,0 +1,36 @@
+.login-wrapper
+  - if notice != nil
+    %p.notice= notice
+  .login-image
+    = image_tag("cover2.jpg")
+  .login-container
+    %h2 Log in
+    %p.alert= alert
+    = form_for(resource, as: resource_name, url: session_path(resource_name), class: "login") do |f|
+      .field-email
+        = f.text_field :email, autofocus: true, autocomplete: "email", class: "input-email", required: "true"
+        = f.label :email, class: "label-email"
+        %br/
+      .field-pass
+        = f.password_field :password, autocomplete: "current-password", class: "input-pass", required: "true"
+        = f.label :password , class: "label-pass"
+        %br/
+      .field.remember-forgot
+        .remember
+          = f.check_box :remember_me
+          = f.label :remember_me
+        - if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations'
+          = link_to "Forgot password?", new_password_path(resource_name), class: "forgot"
+      = f.button "Log in", class: "login-submit", data: {turbo: false, disable_with: "<i class='fa-solid fa-spinner fast-spin'></i>"}
+    - if devise_mapping.omniauthable?
+      - resource_class.omniauth_providers.each do |provider|
+        = form_for "Login",                                      |
+          url: omniauth_authorize_path(resource_name, provider), |
+          method: :post,                                         |
+          data: { turbo: "false"} do |g|                         |
+          = g.button "Sign with Google", data: { turbo: false }, class: "login-google" do
+            %i.fa-brands.fa-google
+            %span Sign with Google
+    .login
+      %p Dont have an account yet?
+      = link_to "Sign up", sign_up_path

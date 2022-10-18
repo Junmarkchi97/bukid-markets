@@ -1,0 +1,5 @@
+%h1= @user.full_name
+= link_to "Home" , root_path
+- if current_user.id == @user.id
+  = link_to 'Edit my Profile' , edit_user_path(current_user)
+%img.image{src: "#{@user.avatar.to_s}"}/

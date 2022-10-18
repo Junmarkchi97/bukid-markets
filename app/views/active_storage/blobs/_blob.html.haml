@@ -1,0 +1,4 @@
+%figure{class: "attachment attachment--#{blob.representable? ? "preview" : "file"} attachment--#{blob.filename.extension}"}
+  - if blob.representable?
+    %a
+      %img.image{src: "https://res.cloudinary.com/bukidmarkets/image/upload/#{blob.key}"}/

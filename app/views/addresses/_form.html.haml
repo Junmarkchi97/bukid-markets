@@ -1,0 +1,29 @@
+= form_with(model: [@user, address],url: user_addresses_url(@user), class:"address-form") do |form|
+  - if address.errors.any?
+    %div{style: "color: red"}
+      %h2
+        = pluralize(address.errors.count, "error")
+        prohibited this address from being saved:
+      %ul
+        - address.errors.each do |error|
+          %li= error.full_message
+  .field-street
+    = form.label :street, class:"label-street"
+    = form.text_field :street, class:"input-street"
+  .field-barangay
+    = form.label :barangay, class:"label-barangay"
+    = form.text_field :barangay, class:"input-barangay"
+  .field-city
+    = form.label :city, class:"label-city"
+    = form.text_field :city, class:"input-city"
+  .field-postal_code
+    = form.label :postal_code, class:"label-postal_code"
+    = form.text_field :postal_code, class:"input-postal_code"
+  .field-country
+    = form.label :country, class:"label-country"
+    = form.text_field :country, class:"input-country", disabled: "true"
+  .field-phone_number
+    = form.label :phone_number, class:"label-phone_number"
+    = form.text_field :phone_number, class:"input-phone_number"
+  .actions
+    = form.button "Save Address", class:"field-save", data: {turbo: false, disable_with: "<i class='fa-solid fa-spinner fast-spin'></i>"}

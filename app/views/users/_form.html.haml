@@ -1,0 +1,41 @@
+= form_with(model: user, local: true, class:"profile-form") do |form|
+  .container
+    .fields
+      .field-username
+        = form.label :username, class:"label-username"
+        = form.text_field :username, class:"input-username"
+      .field-first
+        = form.label :first_name, class:"label-first"
+        = form.text_field :first_name, class:"input-first"
+      .field-last
+        = form.label :last_name, class:"label-last"
+        = form.text_field :last_name, class:"input-last"
+    .image-container
+      - if current_user.avatar?
+        = form.label :avatar do
+          = image_tag(current_user.avatar.to_s)
+          %span.material-symbols-sharp
+            add_a_photo
+        = form.file_field :avatar, direct_upload: true
+      - elsif current_user.google_avatar?
+        = form.label :avatar do
+          = image_tag(current_user.google_avatar.to_s)
+          %span.material-symbols-sharp
+            add_a_photo
+        = form.file_field :avatar, direct_upload: true
+      - else
+        = form.label :avatar do
+          = image_tag("profile.png")
+          %span.material-symbols-sharp
+            add_a_photo
+        = form.file_field :avatar, direct_upload: true
+  .field-email
+    = form.label :email, class:"label-email"
+    = form.text_field :email, class:"input-email", disabled:"true"
+  .field-bio
+    = form.label :bio, class:"label-bio"
+    = form.text_area :bio, class:"input-bio"
+    %h5 Do not exceed 100 characters when entering the bio.
+  .actions
+    = form.button "Save Information", class:"field-save", data: {turbo: false, disable_with: "<i class='fa-solid fa-spinner fast-spin'></i>"}
+    = link_to "Logout", destroy_user_session_path, method: :delete , class:"field-logout"

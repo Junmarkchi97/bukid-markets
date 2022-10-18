@@ -1,7 +1,0 @@
-
-<h1><%= @user.full_name %></h1>
-<%= link_to "Home" , root_path %>
-<% if current_user.id == @user.id %>
-  <%= link_to 'Edit my Profile' , edit_user_path(current_user) %>
-<% end %>
-<img class="image" src="<%= @user.avatar.to_s %>">

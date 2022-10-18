@@ -1,0 +1,43 @@
+.products-new
+  = form_with(model: product, class:"form-product") do |form|
+    - if product.errors.any?
+      .error
+        %h2
+          = pluralize(product.errors.count, "error")
+          prohibited this product from being saved:
+        %ul
+          - product.errors.each do |error|
+            %li= error.full_message
+    .product-name
+      = form.label :Product_Name, class: "label-title" do
+        Product Name
+      = form.text_field :title, class:"input-title", autocomplete:"off"
+      %h5 Do not exceed 10 characters when entering the product name.
+    .price-category
+      .product-category
+        = form.label :category, class: "label-category" do
+          Category
+          %i.fa-solid.fa-circle-info
+        = form.select :category_id, options_for_select(@categories.collect { |category|  [category.name, category.id] }) , class:"input-category"
+        %h5 Choose between the categories.
+      .product-price
+        = form.label :Price, class: "label-price"
+        .price-container
+          = form.number_field :price, class:"input-price", autocomplete:"off"
+          %h4 ₱
+        %h5 Price per kilo in PHP.
+    .product-description
+      = form.label :Description, class: "label-description" do
+        Description
+        %i.fa-solid.fa-circle-info
+      = form.rich_text_area :description, class:"input-description", autocomplete:"off"
+    .product-thumbnail
+      = form.label :thumbnail, class: "label-thumbnail"
+      = form.file_field :thumbnail, direct_upload: true, class:"input-thumbnail"
+    .add-back
+      = form.button "Add Product", class: "product-submit", data: {turbo: false, disable_with: "<i class='fa-solid fa-spinner fast-spin'></i>"} do
+        - if request.path == "/products/new"
+          Add Product
+        - else
+          Update
+      = link_to "Back", seller_index_path

@@ -1,0 +1,25 @@
+%div{id: "#{dom_id product}"}
+  %p
+    %strong Title:
+    = product.title
+  %p
+    %strong Price:
+    = product.price
+    Per Kilo
+  %p
+    %strong Category:
+    = product.category.name
+  %p
+    %strong Description:
+    = product.description
+  %p
+    %strong Phone Number:
+    = User.find(product.user_id).address.phone_number
+  %p
+    %strong Seller:
+    = User.find(product.user_id).username
+  %p
+    %strong Location:
+    = User.find(product.user_id).address.city
+    ,
+    \#{User.find(product.user_id).address.country}
