@@ -35,7 +35,7 @@
 <img src="./app/assets/images/gif.gif" width="100%"/>
 
 ## 📰 Overview
-Bukid Markets was built to be a go-to web app for farmers to list and sell their fresh produce. It enables farmers to sell to a broader set of customers by going modern and expanding their area of coverage. This web app enables users to register an account or login via google. Sellers can list and display their item on the marketplace while Buyers can browse and view the marketplace without a registered account.
+Bukid Markets was built to be a go-to web app for farmers to sell their produce. It enables farmers to obtain a broader set of customers by expanding their area of coverage. This web app enables users to register an account or login via google. Sellers can list and display their item on the marketplace while Buyers can browse and view the marketplace without an account.
 
 #### 📒 Test User Account
 Email: `bukidmarkets.test@gmail.com` <br>
